@@ -4,8 +4,7 @@
 
     User - Пользователь
     Question - Вопрос
-    Answers - Ответы
+    Answer - Ответ
     Test - тест
-    TestСategory - тема/категория теста
-    TestResult - результат теста
+    Сategory - категория теста
 

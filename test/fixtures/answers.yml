@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  variant: 
+  correct: 
+  question: one
+
+two:
+  variant: 
+  correct: 
+  question: two
