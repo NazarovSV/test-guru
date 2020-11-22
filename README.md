@@ -7,4 +7,4 @@
     Answer - Ответ
     Test - тест
     Сategory - категория теста
-
+    UserProgress - прогресс пользователя
