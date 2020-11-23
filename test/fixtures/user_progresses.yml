@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  test: one
+  total_passed_questions: 1
+  is_completed: false
+
+two:
+  user: two
+  test: two
+  total_passed_questions: 1
+  is_completed: false
