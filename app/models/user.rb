@@ -1,8 +1,8 @@
 class User < ApplicationRecord
 
   def completed_tests_by_level(level)
-    user_completed_test_ids = UserProgress.where(user_id: self.id).pluck(:test_id)
-    Test.where(level: level, id: user_completed_test_ids)
+    Test.joins("JOIN user_progresses ON user_progresses.test_id = tests.id")
+        .where(user_progresses: {user_id: self.id, is_completed: true }, level: level)
   end
 
 end
