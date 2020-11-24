@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
   belongs_to :category
   has_many :questions
-  belongs_to :user
+  belongs_to :author, class_name: "User", foreign_key: :user_id
   has_many :user_progresses
   has_many :users, through: :user_progresses
 
