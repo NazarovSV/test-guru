@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :created_tests, class_name: "Test", dependent: :restrict_with_exception
+  has_many :owned_tests, class_name: "Test", dependent: :restrict_with_exception
   has_many :user_progresses, dependent: :destroy
   has_many :tests, through: :user_progresses
 
