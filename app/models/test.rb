@@ -5,6 +5,10 @@ class Test < ApplicationRecord
   has_many :user_progresses, dependent: :destroy
   has_many :users, through: :user_progresses
 
+  scope :simple, -> {where(level: 0..1)}
+  scope :normal, -> {where(level: 2..4)}
+  scope :hard, -> {where(level: 5..Float::INFINITY)}
+
   def self.test_names_by_category_name_sorted_desc(category_name)
     joins("JOIN categories ON tests.category_id = categories.id")
       .where(categories: {title: category_name})
