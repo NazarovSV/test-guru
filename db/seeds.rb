@@ -17,11 +17,11 @@ normal_category = Category.find_or_create_by!(title: 'Нормальные')
 hard_category = Category.find_or_create_by!(title: 'Сложные')
 
 #Tests
-car_test = Test.find_or_create_by!(title: 'тест про машины', category: simple_category)
-beast_test = Test.find_or_create_by!(title: 'тест про животных', category: normal_category)
-pc_test = Test.find_or_create_by!(title: 'тест про компьютеры', level: 2, category: normal_category)
-chemistry_test = Test.find_or_create_by!(title: 'тест по химии', level: 3, category: hard_category)
-math_test = Test.find_or_create_by!(title: 'тест по математике', level: 3, category: hard_category)
+car_test = Test.find_or_create_by!(title: 'тест про машины', category: simple_category, user_id: user.id)
+beast_test = Test.find_or_create_by!(title: 'тест про животных', category: normal_category, user_id: admin.id)
+pc_test = Test.find_or_create_by!(title: 'тест про компьютеры', level: 2, category: normal_category, user_id: user.id)
+chemistry_test = Test.find_or_create_by!(title: 'тест по химии', level: 3, category: hard_category, user_id: admin.id)
+math_test = Test.find_or_create_by!(title: 'тест по математике', level: 3, category: hard_category, user_id: admin.id)
 
 #Questions
 car_question = Question.find_or_create_by!(body: 'Выберите японскую машину', test: car_test)
