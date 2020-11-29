@@ -5,6 +5,10 @@ class Test < ApplicationRecord
   has_many :user_progresses, dependent: :destroy
   has_many :users, through: :user_progresses
 
+  validates :title, :level, :user_id, :category_id, presence: true
+  validates :level, numericality: {only_integer: true, greater_than_or_equal_to: 0}
+  validates :title, uniqueness: true
+
   scope :simple, -> {where(level: 0..1)}
   scope :normal, -> {where(level: 2..4)}
   scope :hard, -> {where(level: 5..Float::INFINITY)}
