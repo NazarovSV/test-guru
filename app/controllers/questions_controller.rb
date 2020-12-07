@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
   before_action :find_question_by_id, only: [:show]
+  before_action :find_question_by_id_and_test_id, only: [:remove]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -19,10 +20,25 @@ class QuestionsController < ApplicationController
     render plain: 'Test was created!'
   end
 
+  def choose_question_for_remove; end
+
+  def remove
+    if @questions.any?
+      Question.destroy params[:id]
+      render html: '<h1>Question was deleted!</h1>'.html_safe
+    else
+      render plain: 'Question not found!'
+    end
+  end
+
   private
 
   def find_question_by_id
     @question = Question.find(params[:id])
+  end
+
+  def find_question_by_id_and_test_id
+    @questions = Question.where(id: params[:id], test_id: params[:test_id])
   end
 
   def rescue_with_question_not_found
