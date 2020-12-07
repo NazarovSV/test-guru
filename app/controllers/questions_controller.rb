@@ -12,6 +12,13 @@ class QuestionsController < ApplicationController
     render json: { question: @question }
   end
 
+  def new; end
+
+  def create
+    Question.create! body: params[:question][:body], test_id: params[:test_id]
+    render plain: 'Test was created!'
+  end
+
   private
 
   def find_question_by_id
