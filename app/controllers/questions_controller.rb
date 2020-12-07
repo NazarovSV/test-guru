@@ -2,11 +2,12 @@ class QuestionsController < ApplicationController
 
   before_action :find_question_by_id, only: [:show]
   before_action :find_question_by_id_and_test_id, only: [:remove]
+  before_action :find_question_by_test_id, only: [:index]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
   def index
-    render json: { questions: Question.all }
+    render json: { questions: @questions }
   end
 
   def show
@@ -39,6 +40,10 @@ class QuestionsController < ApplicationController
 
   def find_question_by_id_and_test_id
     @questions = Question.where(id: params[:id], test_id: params[:test_id])
+  end
+
+  def find_question_by_test_id
+    @questions = Question.find_by_test_id!(params[:test_id])
   end
 
   def rescue_with_question_not_found
