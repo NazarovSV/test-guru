@@ -20,16 +20,6 @@ class QuestionsController < ApplicationController
     render plain: 'Test was created!'
   end
 
-  def remove
-    Question.where(id: params[:id], test_id: params[:test_id])
-    if @questions.any?
-      Question.destroy params[:id]
-      render html: '<h1>Question was deleted!</h1>'.html_safe
-    else
-      render plain: 'Question not found!'
-    end
-  end
-
   def destroy
     Question.destroy params[:id]
     redirect_back fallback_location: :root_path
