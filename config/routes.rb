@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
+  root to: 'tests#index'
+
   resources :tests do
-    resources :questions, shallow: true do
-      get 'choose_question_for_remove', on: :collection
-      post 'remove', on: :collection
-    end
+    resources :questions, shallow: true
   end
 
 end
