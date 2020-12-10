@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
 
-  before_action :find_question_by_id_and_test_id, only: [:remove]
+  before_action :question_by_id, only: [:show, :destroy]
+  before_action :find_test_by_id, only: [:create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
@@ -9,23 +10,39 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    question = Question.find(params[:id])
-    render json: { question: question }
+    render json: { question: @question }
   end
 
   def new; end
 
   def create
-    Question.create! body: params[:question][:body], test_id: params[:test_id]
-    render plain: 'Test was created!'
+    @question = @test.questions.new(question_params)
+    if @question.save
+      redirect_to action: 'show', id: @question.id
+    else
+      puts question_params.permitted?
+      redirect_back fallback_location: :root_path
+    end
   end
 
   def destroy
-    Question.destroy params[:id]
+    @question.destroy
     redirect_back fallback_location: :root_path
   end
 
   private
+
+  def question_params
+    params.require(:question).permit(:body)
+  end
+
+  def question_by_id
+    @question = Question.find params[:id]
+  end
+
+  def find_test_by_id
+    @test = Test.find params[:test_id]
+  end
 
   def rescue_with_question_not_found
     render plain: 'question was not found'
