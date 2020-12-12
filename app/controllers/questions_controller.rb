@@ -18,16 +18,15 @@ class QuestionsController < ApplicationController
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to action: 'show', id: @question.id
+      redirect_to @question
     else
-      puts question_params.permitted?
-      redirect_back fallback_location: :root_path
+      redirect_to new_test_question_url
     end
   end
 
   def destroy
     @question.destroy
-    redirect_back fallback_location: :root_path
+    redirect_to new_test_question_url
   end
 
   private
@@ -37,11 +36,11 @@ class QuestionsController < ApplicationController
   end
 
   def question_by_id
-    @question = Question.find params[:id]
+    @question = Question.find(params[:id])
   end
 
   def find_test_by_id
-    @test = Test.find params[:test_id]
+    @test = Test.find(params[:test_id])
   end
 
   def rescue_with_question_not_found
