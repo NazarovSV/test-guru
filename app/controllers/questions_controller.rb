@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-  before_action :question_by_id, only: [:show, :destroy]
+  before_action :question_by_id, only: %i[show destroy]
   before_action :find_test_by_id, only: [:create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
@@ -10,7 +10,7 @@ class QuestionsController < ApplicationController
   end
 
   def show
-    render json: { question: @question }
+    #render json: { question: @question }
   end
 
   def new; end
