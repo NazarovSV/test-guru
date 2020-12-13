@@ -1,3 +1,4 @@
 <p>
   <%= link_to test.title, test_url(id: test.id) %>
+  (<%= pluralize(test.questions.count, 'question', plural: 'questions') %>)
 </p>
