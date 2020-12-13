@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
     if @question.update(question_params)
       redirect_to test_url(id: @test.id)
     else
-      redirect_to edit_question_url
+      render :edit
     end
   end
 
@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
     if @question.save
       redirect_to test_url(id: @test.id)
     else
-      redirect_to new_test_question_url
+      render :new
     end
   end
 
