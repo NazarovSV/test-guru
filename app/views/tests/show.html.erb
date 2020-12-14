@@ -1,12 +1,12 @@
 <h2><%= @test.title %>:</h2>
-<% if @test.questions.present? %>
-<table>
-  <tr>
-    <th align="left">Questions:</th>
-    <th colspan="3"></th>
-  </tr>
-  <%= render @test.questions %>
-</table>
+<% if @questions.present? %>
+  <table>
+    <tr>
+      <th align="left">Questions:</th>
+      <th colspan="3"></th>
+    </tr>
+    <%= render @questions %>
+  </table>
 <% end %>
 <br/>
 <br/>
