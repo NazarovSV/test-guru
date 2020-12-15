@@ -1,32 +1,38 @@
 class QuestionsController < ApplicationController
 
-  before_action :question_by_id, only: [:show, :destroy]
-  before_action :find_test_by_id, only: [:create]
+  before_action :question_by_id, only: %i[show destroy edit update]
+  before_action :find_test_by_id, only: %i[new create]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
 
-  def index
-    @questions = Question.where(test_id: params[:test_id])
+  def show; end
+
+  def new
+    @question = @test.questions.new
   end
 
-  def show
-    render json: { question: @question }
-  end
+  def edit; end
 
-  def new; end
+  def update
+    if @question.update(question_params)
+      redirect_to test_url(id: @test.id)
+    else
+      render :edit
+    end
+  end
 
   def create
     @question = @test.questions.new(question_params)
     if @question.save
-      redirect_to @question
+      redirect_to test_url(id: @test.id)
     else
-      redirect_to new_test_question_url
+      render :new
     end
   end
 
   def destroy
     @question.destroy
-    redirect_to new_test_question_url
+    redirect_to test_url(@question.test_id)
   end
 
   private
@@ -37,6 +43,7 @@ class QuestionsController < ApplicationController
 
   def question_by_id
     @question = Question.find(params[:id])
+    @test = @question.test
   end
 
   def find_test_by_id
