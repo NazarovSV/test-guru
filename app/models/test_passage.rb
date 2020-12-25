@@ -19,15 +19,14 @@ class TestPassage < ApplicationRecord
 
   def before_validation_set_current_question
     return unless test.present?
-      
+
     self.current_question = if current_question.nil?
-                                test.questions.first
-                              else
-                                test.questions.order(:id)
-                                    .where('id > ?', current_question.id)
-                                    .first
-                              end
-    end
+                              test.questions.first
+                            else
+                              test.questions.order(:id)
+                                  .where('id > ?', current_question.id)
+                                  .first
+                            end
   end
 
   def correct_answer?(answer_ids)
