@@ -5,6 +5,12 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question
 
+  SUCCESS_RATE = 0.85
+
+  def successfully?
+    correct_questions / test.questions.count >= SUCCESS_RATE
+  end
+
   def accept!(answer_ids)
     self.correct_questions += 1 if correct_answer?(answer_ids)
 
