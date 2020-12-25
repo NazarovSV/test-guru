@@ -8,7 +8,11 @@ class TestPassage < ApplicationRecord
   SUCCESS_RATE = 0.85
 
   def successfully?
-    correct_questions / test.questions.count >= SUCCESS_RATE
+    rate >= SUCCESS_RATE
+  end
+
+  def rate
+    (correct_questions / (test.questions.count * 1.0)).round(4)
   end
 
   def accept!(answer_ids)
