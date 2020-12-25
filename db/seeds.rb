@@ -53,13 +53,13 @@ answers.each do |answer|
 end
 
 # UserProgress
-car_test_questions_count = Question.where(test_id: car_test.id).count
-math_test_questions_count = Question.where(test_id: math_test.id).count
+# car_test_questions_count = Question.where(test_id: car_test.id).count
+# math_test_questions_count = Question.where(test_id: math_test.id).count
 
-user_progresses = [{ user_id: user.id, test_id: car_question.id, total_passed_questions: car_test_questions_count, is_completed: true },
-                   { user_id: user.id, test_id: chemistry_question.id },
-                   { user_id: user.id, test_id: math_test.id, total_passed_questions: math_test_questions_count, is_completed: true }]
+# user_progresses = [{ user_id: user.id, test_id: car_question.id, total_passed_questions: car_test_questions_count, is_completed: true },
+#                    { user_id: user.id, test_id: chemistry_question.id },
+#                    { user_id: user.id, test_id: math_test.id, total_passed_questions: math_test_questions_count, is_completed: true }]
 
-user_progresses.each do |user_progress|
-  UserProgress.find_or_create_by! user_progress
-end
+# user_progresses.each do |user_progress|
+#   UserProgress.find_or_create_by! user_progress
+# end
