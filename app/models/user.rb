@@ -12,10 +12,10 @@ class User < ApplicationRecord
   validates :name, :email, presence: true
   validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
 
-  #TODO: Refactor this on test_passages model
   def completed_tests_by_level(level)
-    Test.joins('JOIN user_progresses ON user_progresses.test_id = tests.id')
-        .where(user_progresses: { user_id: id, is_completed: true }, level: level)
+    Test.joins('JOIN test_passages ON test_passages.test_id = tests.id')
+        .where(test_passages: { user_id: id, current_question: nil }, level: level)
+        .distinct
   end
 
   def test_passage(test)

@@ -30,6 +30,7 @@ beast_question = Question.find_or_create_by!(body: 'Самое большое ж
 pc_question = Question.find_or_create_by!(body: 'Назовите производителей процессоров', test: pc_test)
 chemistry_question = Question.find_or_create_by!(body: 'Формула воды', test: chemistry_test)
 math_question = Question.find_or_create_by!(body: '2 + 2 = ?', test: math_test)
+math_question2 = Question.find_or_create_by!(body: '2 + 4 = ?', test: math_test)
 
 # Answers
 answers = [{ variant: 'bmw', question: car_question },
@@ -46,7 +47,9 @@ answers = [{ variant: 'bmw', question: car_question },
            { variant: 'H3O', question: chemistry_question },
            { variant: '4', correct: true, question: math_question },
            { variant: '2', question: math_question },
-           { variant: '0', question: math_question }]
+           { variant: '0', question: math_question },
+           { variant: '6', correct: true, question: math_question2 },
+           { variant: '-6', question: math_question2 }]
 
 answers.each do |answer|
   Answer.find_or_create_by! answer
