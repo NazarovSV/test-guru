@@ -26,16 +26,28 @@ math_test = Test.find_or_create_by!(title: 'тест по математике',
 
 # Questions
 car_question = Question.find_or_create_by!(body: 'Выберите японскую машину', test: car_test)
+car_question2 = Question.find_or_create_by!(body: 'Выберите немецкую машину', test: car_test)
+car_question3 = Question.find_or_create_by!(body: 'Bugatti - какая страна', test: car_test)
+car_question4 = Question.find_or_create_by!(body: 'Bugatti принадлежит Volksvaggen', test: car_test)
 beast_question = Question.find_or_create_by!(body: 'Самое большое животное', test: beast_test)
 pc_question = Question.find_or_create_by!(body: 'Назовите производителей процессоров', test: pc_test)
 chemistry_question = Question.find_or_create_by!(body: 'Формула воды', test: chemistry_test)
 math_question = Question.find_or_create_by!(body: '2 + 2 = ?', test: math_test)
 math_question2 = Question.find_or_create_by!(body: '2 + 4 = ?', test: math_test)
+math_question3 = Question.find_or_create_by!(body: '2 + 6 = ?', test: math_test)
 
 # Answers
 answers = [{ variant: 'bmw', question: car_question },
            { variant: 'kia', question: car_question },
            { variant: 'mazda', correct: true, question: car_question },
+           { variant: 'bmw', correct: true, question: car_question2 },
+           { variant: 'kia', question: car_question2 },
+           { variant: 'mazda', question: car_question2 },
+           { variant: 'Франция', correct: true, question: car_question3 },
+           { variant: 'Германия', question: car_question3 },
+           { variant: 'Италия', question: car_question3 },
+           { variant: 'Да', correct: true, question: car_question4 },
+           { variant: 'Нет', question: car_question4 },
            { variant: 'медведь', correct: true, question: beast_question },
            { variant: 'волк', question: beast_question },
            { variant: 'заяц', question: beast_question },
@@ -49,7 +61,10 @@ answers = [{ variant: 'bmw', question: car_question },
            { variant: '2', question: math_question },
            { variant: '0', question: math_question },
            { variant: '6', correct: true, question: math_question2 },
-           { variant: '-6', question: math_question2 }]
+           { variant: '-6', question: math_question2 },
+           { variant: '8', correct: true, question: math_question3 },
+           { variant: '0.8', question: math_question3 },
+           { variant: '8.0', correct: true, question: math_question3 }]
 
 answers.each do |answer|
   Answer.find_or_create_by! answer

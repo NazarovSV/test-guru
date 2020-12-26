@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  # has_many :owned_tests, class_name: 'Test', dependent: :restrict_with_exception
-  # has_many :user_progresses, dependent: :destroy
-  # has_many :tests, through: :user_progresses
-
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :owned_tests, class_name: 'Test', foreign_key: :user_id, dependent: :restrict_with_exception
