@@ -1,13 +1,9 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_test, only: %i[show start]
+  before_action :set_test, only: %i[start]
 
   def index
     @tests = Test.all
-  end
-
-  def show
-    @questions = @test.questions
   end
 
   def start
@@ -16,10 +12,6 @@ class TestsController < ApplicationController
   end
 
   private
-
-  def test_params
-    params.require(:test).permit(:title, :level, :category_id)
-  end
 
   def set_test
     @test = Test.find(params[:id])

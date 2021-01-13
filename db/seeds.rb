@@ -9,8 +9,12 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-user = User.find_or_create_by!(name: 'Sergey Nazarov', email: 'fake@yandex.ru')
-admin = User.find_or_create_by!(name: 'Admin', email: 'admin@tguru.net')
+
+user = User.new(name: 'Sergey Nazarov', email: 'fake@yandex.ru', password: '123456')
+admin = User.new(name: 'Admin', email: 'admin@tguru.net', password: '123456')
+
+user.save! unless User.find_by(email: user.email)
+admin.save! unless User.find_by(email: admin.email)
 
 # Categories
 simple_category = Category.find_or_create_by!(title: 'Простые')
