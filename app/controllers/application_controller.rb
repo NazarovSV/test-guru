@@ -5,14 +5,6 @@ class ApplicationController < ActionController::Base
   private
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-  end
-
-  def after_sign_in_path_for(_resource)
-    if current_user.is_a?(Admin)
-      admin_tests_url
-    else
-      tests_url
-    end
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name])
   end
 end
