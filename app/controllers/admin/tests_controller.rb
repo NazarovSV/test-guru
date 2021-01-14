@@ -1,5 +1,4 @@
-class Admin::TestsController < ApplicationController
-  before_action :authenticate_user!
+class Admin::TestsController < Admin::BaseController
   before_action :set_test, only: %i[show start]
 
   def index

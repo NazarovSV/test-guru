@@ -1,5 +1,4 @@
 <p>
     <%= link_to test.title, admin_test_url(id: test.id) %>
     (<%= pluralize(test.questions.count, 'question', plural: 'questions') %>)
-    <%= button_to 'Start', start_test_path(test) %>
 </p>
