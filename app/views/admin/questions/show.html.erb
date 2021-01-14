@@ -2,12 +2,12 @@
   <%= @question.body %>
 </h3>
 <h2>Answers</h2>
-<%= link_to 'New answer', new_question_answer_path(@question) %>
+<%= link_to 'New answer', new_admin_question_answer_path(@question) %>
 
 <ol>
   <%= render @question.answers %>
 </ol>
 
-</br>
-<%= link_to 'Edit', admin_edit_question_path(@question) %> |
+<br>
+<%= link_to 'Edit', edit_admin_question_path(@question) %> |
 <%= link_to 'Back', admin_test_path(@question.test) %>
