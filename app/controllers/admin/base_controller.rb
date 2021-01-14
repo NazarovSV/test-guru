@@ -9,4 +9,8 @@ class Admin::BaseController < ApplicationController
   def admin_required!
     redirect_to root_path, alert: 'You are not authorized to view this path.' unless current_user.is_a?(Admin)
   end
+
+  def after_sign_in_path_for(_resource)
+    admin_tests_url if current_user.is_a?(Admin)
+  end
 end
