@@ -9,8 +9,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Users
-user = User.find_or_create_by!(name: 'Sergey Nazarov', email: 'fake@yandex.ru')
-admin = User.find_or_create_by!(name: 'Admin', email: 'admin@tguru.net')
+
+unless User.find_by(email: 'fake@yandex.ru')
+  @user = User.create!(name: 'Sergey Nazarov', email: 'fake@yandex.ru',
+                       password: '111111')
+end
+unless User.find_by(email: 'admin@tguru.net')
+  @admin = Admin.create!(name: 'Admin', first_name: 'Sergey', last_name: 'Nazarov', email: 'admin@tguru.net',
+                         password: '111111')
+end
 
 # Categories
 simple_category = Category.find_or_create_by!(title: 'Простые')
@@ -18,11 +25,11 @@ normal_category = Category.find_or_create_by!(title: 'Нормальные')
 hard_category = Category.find_or_create_by!(title: 'Сложные')
 
 # Tests
-car_test = Test.find_or_create_by!(title: 'тест про машины', category: simple_category, user_id: user.id)
-beast_test = Test.find_or_create_by!(title: 'тест про животных', category: normal_category, user_id: admin.id)
-pc_test = Test.find_or_create_by!(title: 'тест про компьютеры', level: 2, category: normal_category, user_id: user.id)
-chemistry_test = Test.find_or_create_by!(title: 'тест по химии', level: 3, category: hard_category, user_id: admin.id)
-math_test = Test.find_or_create_by!(title: 'тест по математике', level: 5, category: hard_category, user_id: admin.id)
+car_test = Test.find_or_create_by!(title: 'тест про машины', category: simple_category, user_id: @user.id)
+beast_test = Test.find_or_create_by!(title: 'тест про животных', category: normal_category, user_id: @admin.id)
+pc_test = Test.find_or_create_by!(title: 'тест про компьютеры', level: 2, category: normal_category, user_id: @user.id)
+chemistry_test = Test.find_or_create_by!(title: 'тест по химии', level: 3, category: hard_category, user_id: @admin.id)
+math_test = Test.find_or_create_by!(title: 'тест по математике', level: 5, category: hard_category, user_id: @admin.id)
 
 # Questions
 car_question = Question.find_or_create_by!(body: 'Выберите японскую машину', test: car_test)

@@ -1,15 +1,21 @@
 # frozen_string_literal: true
 
-require 'digest/sha1'
-
 class User < ApplicationRecord
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :trackable,
+         :validatable,
+         :confirmable
+
   has_many :test_passages
   has_many :tests, through: :test_passages
   has_many :owned_tests, class_name: 'Test', foreign_key: :user_id, dependent: :restrict_with_exception
 
   validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Wrong email format' }
-
-  has_secure_password
 
   def completed_tests_by_level(level)
     Test.joins('JOIN test_passages ON test_passages.test_id = tests.id')
