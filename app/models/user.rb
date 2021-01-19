@@ -15,7 +15,7 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :owned_tests, class_name: 'Test', foreign_key: :user_id, dependent: :restrict_with_exception
 
-  validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Wrong email format' }
+  validates :email, uniqueness: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: :wrong_format }
 
   def completed_tests_by_level(level)
     Test.joins('JOIN test_passages ON test_passages.test_id = tests.id')

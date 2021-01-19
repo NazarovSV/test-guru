@@ -15,3 +15,4 @@ en:
     errors:
       messages:
         blank: "can't be blank"
+        wrong_format: "Wrong email format"

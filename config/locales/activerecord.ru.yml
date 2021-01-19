@@ -11,7 +11,11 @@ ru:
         body: "Вопрос"
       answer:
         variant: "Вариант"
+      user:
+        email: "Почта"
+        password: "Пароль"
 
     errors:
       messages:
         blank: "не может быть пустым"
+        wrong_format: "имеет не правильный формат"
