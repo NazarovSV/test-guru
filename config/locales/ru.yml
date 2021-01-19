@@ -3,6 +3,12 @@ ru:
     submit:
       test:
         create: "Создать тест"
+      answer:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
     label:
       test:
         title: "Название"
@@ -22,6 +28,17 @@ ru:
     result:
       completed: 'Тест "%{title}" пройден!'
       failed: 'Тест "%{title}" провален!'
+      rate: "Процент успешности"
+      back: "Назад к списку тестов"
+    show:
+      header: 'Прохождение "%{title}" теста'
+      question_no:
+        few: "%{number} вопрос из %{count} вопросов"
+        many: "%{number} вопрос из %{count} вопросов"
+        one: "%{number} вопрос из %{count} вопроса"
+        other: "%{number} вопрос из %{count} вопросов"
+      next: "Следующий вопрос"
+      back: "Назад к списку тестов"
 
   tests:
     index:
@@ -64,10 +81,26 @@ ru:
         back: "Назад"
     questions:
       question:
-        show: "Показать"
-        edit: "Редактировать"
-        destroy: "Удалить"
         confirm: "Подтвердить удаление?"
+      show:
+        header: "Ответы"
+        new: "Новый ответ"
+      edit:
+        question: "Вопрос"
+      new:
+        question: "Вопрос"
+    answers:
+      answer:
+        confirm: "Вы уверены?"
+      show:
+        header: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильный"
+      edit:
+        header: "Редактирование ответа"
+      form:
+        variant: "Вариант"
+        correct: "Правильный"
 
     nav:
       header: "TestGuru Админская Панель"
@@ -77,3 +110,19 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  custom_helper:
+    question:
+      edit: 'Обновить "%{title}" вопрос'
+      create: 'Создать "%{title}" вопрос'
+
+  button:
+    show: "Показать"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    back: "Назад"
+
+  "true": "да"
+  "false": "нет"
+
+  question: h

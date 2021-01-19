@@ -2,10 +2,10 @@
 <%= form_with model: [:admin, @question], local: true do |form|%>
   <%= render 'shared/errors', resource: @question %>
   <p>
-    <%= form.label :body, "Question:" %>
+    <%= form.label :body, "#{t('.question')}:" %>
     <%= form.text_field :body, id: :question_body %>
   </p>
-  <%= form.submit "Update question" %>
+  <%= form.submit %>
 <% end %>
 <br/>
-<%= link_to 'Back', admin_test_path(@question.test) %>
+<%= link_to t('button.back'), admin_test_path(@question.test) %>

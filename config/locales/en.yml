@@ -3,6 +3,12 @@ en:
     submit:
       test:
         create: "Create test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
     label:
       test:
         title: "Title"
@@ -15,6 +21,15 @@ en:
     result:
       completed: 'The "%{title}" Test was Completed!'
       failed: 'The "%{title}" Test was failed!'
+      rate: "Success rate"
+      back: "Back to tests"
+    show:
+      header: 'Passing the "%{title}" Test'
+      question_no:
+        one: "%{number} question from %{count} question"
+        other: "%{number} question from %{count} questions"
+      next: "Next"
+      back: "Back to tests"
 
   tests:
     index:
@@ -51,17 +66,31 @@ en:
         header: "Tests"
       new:
         header: "Add new"
-        back: "Back"
       show:
         questions: "Questions"
         new: "New Question"
-        back: "Back"
     questions:
       question:
-        show: "Show"
-        edit: "Edit"
-        destroy: "Destroy"
         confirm: "Confirm deletion?"
+      show:
+        header: "Answers"
+        new: "New Answer"
+      edit:
+        question: "Question"
+      new:
+        question: "Question"
+    answers:
+      answer:
+        confirm: "Are you sure?"
+      show:
+        header: "Question"
+        answer: "Answer"
+        correct: "Correct"
+      edit:
+        header: "Editing Answer"
+      form:
+        variant: "Variant"
+        correct: "Correct"
     nav:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
@@ -70,3 +99,17 @@ en:
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  custom_helper:
+    question:
+      edit: 'Edit "%{title}" Question'
+      create: 'Create "%{title}" Question'
+
+  button:
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    back: "Back"
+
+  "true": "yes"
+  "false": "no"

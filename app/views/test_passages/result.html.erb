@@ -4,6 +4,6 @@
     <h1 style="color:red"><%= t('.failed', title: @test_passage.test.title) %></h1>
 <% end%>
 <br>
-<p>Success rate: <%= @test_passage.rate * 100 %>%</p>
-<%= link_to 'Back to tests',  root_path%>
+<p><%= t('.rate') %>: <%= @test_passage.rate * 100 %>%</p>
+<%= link_to t('.back'),  root_path%>
 

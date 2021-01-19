@@ -3,12 +3,12 @@
     <%= question.body %>
   </td>
   <td>
-    <%= link_to t('.show'), admin_question_path(question) %> |
+    <%= link_to t('button.show'), admin_question_path(question) %> |
   </td>
   <td>
-    <%= link_to t('.edit'), edit_admin_question_path(question) %> |
+    <%= link_to t('button.edit'), edit_admin_question_path(question) %> |
   </td>
   <td>
-    <%= link_to t('.destroy'), admin_question_path(question), method: :delete, data: { confirm: t('.confirm') } %>
+    <%= link_to t('button.destroy'), admin_question_path(question), method: :delete, data: { confirm: t('.confirm') } %>
   </td>
 </tr>
