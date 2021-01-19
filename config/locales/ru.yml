@@ -101,6 +101,8 @@ ru:
       form:
         variant: "Вариант"
         correct: "Правильный"
+      new:
+        header: "Новый ответ"
 
     nav:
       header: "TestGuru Админская Панель"
@@ -125,4 +127,4 @@ ru:
   "true": "да"
   "false": "нет"
 
-  question: h
+  not_authorized: "Вы не авторизованы для этого пути"

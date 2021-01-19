@@ -91,6 +91,8 @@ en:
       form:
         variant: "Variant"
         correct: "Correct"
+      new:
+        header: "New Answer"
     nav:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
@@ -113,3 +115,5 @@ en:
 
   "true": "yes"
   "false": "no"
+
+  not_authorized: "You are not authorized to view this path."

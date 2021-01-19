@@ -6,6 +6,11 @@ en:
     attributes:
       test:
         title: "Title"
+        category: "Category"
+      question:
+        body: "Question"
+      answer:
+        variant: "Variant"
 
     errors:
       messages:

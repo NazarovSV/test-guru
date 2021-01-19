@@ -6,6 +6,11 @@ ru:
     attributes:
       test:
         title: "Название"
+        category: "Категория"
+      question:
+        body: "Вопрос"
+      answer:
+        variant: "Вариант"
 
     errors:
       messages:
