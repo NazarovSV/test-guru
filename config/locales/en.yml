@@ -8,6 +8,8 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+    current_year:
+      year: "Current year: %{year}"
 
   test_passages:
     result:
@@ -17,6 +19,18 @@ en:
   tests:
     index:
       header: "Tests"
+    test:
+      question:
+        one: "%{count} question"
+        other: "%{count} questions"
+      start: "Start"
+
+  layouts:
+    application:
+      welcome: "Welcome, <b>%{email}</b> Guru"
+      login: "Login"
+      logout: "Logout"
+      registration: "Registration"
 
   shared:
     errors:
@@ -30,6 +44,10 @@ en:
         success: "Test create successfully!"
       index:
         header: "Tests"
+    nav:
+      header: "TestGuru Admin Panel"
+      welcome: "Welcome, <b>%{email}</b> Guru"
+      logout: "Logout"
 
   tests_mailer:
     completed_test:

@@ -8,6 +8,15 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+    current_year:
+      year: "Текущий год: %{year}"
+
+  layouts:
+    application:
+      welcome: "Привет, <b>%{email}</b> Гуру"
+      login: "Войти"
+      logout: "Выйти"
+      registration: "Зарегистрироваться"
 
   test_passages:
     result:
@@ -17,6 +26,13 @@ ru:
   tests:
     index:
       header: "Тесты"
+    test:
+      question:
+        few: "%{count} вопроса"
+        many: "%{count} вопросов"
+        one: "%{count} вопрос"
+        other: "%{count} вопросов"
+      start: "Начать"
 
   shared:
     errors:
@@ -32,6 +48,10 @@ ru:
         success: "Тест создан успешно!"
       index:
         header: "Тесты"
+    nav:
+      header: "TestGuru Админская Панель"
+      welcome: "Привет, <b>%{email}</b> Гуру"
+      logout: "Выйти"
 
   tests_mailer:
     completed_test:
