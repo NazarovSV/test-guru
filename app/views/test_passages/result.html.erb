@@ -1,7 +1,7 @@
 <% if @test_passage.successfully? %>
-    <h1 style="color:green">The <%= @test_passage.test.title %> Test was Completed! </h1>
+    <h1 style="color:green"><%= t('.completed', title: @test_passage.test.title) %></h1>
 <% else %>
-    <h1 style="color:red">The <%= @test_passage.test.title %> Test was failed! </h1>
+    <h1 style="color:red"><%= t('.failed', title: @test_passage.test.title) %></h1>
 <% end%>
 <br>
 <p>Success rate: <%= @test_passage.rate * 100 %>%</p>

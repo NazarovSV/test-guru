@@ -21,7 +21,7 @@ class Admin::TestsController < Admin::BaseController
   def create
     @test = current_user.owned_tests.new(test_params)
     if @test.save
-      redirect_to admin_tests_url, notice: 'Test create successfully!'
+      redirect_to admin_tests_url, notice: t('.success')
     else
       render :new
     end

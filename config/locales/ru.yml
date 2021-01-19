@@ -1,1 +1,38 @@
 ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  test_passages:
+    result:
+      completed: 'Тест "%{title}" пройден!'
+      failed: 'Тест "%{title}" провален!'
+
+  tests:
+    index:
+      header: "Тесты"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  admin:
+    tests:
+      create:
+        success: "Тест создан успешно!"
+      index:
+        header: "Тесты"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
