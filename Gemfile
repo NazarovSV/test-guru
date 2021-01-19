@@ -32,6 +32,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise', '~> 4.0'
 
 # LOCALIZATION
+gem 'devise-i18n'
 gem 'rails-i18n', '~> 6.0.0'
 
 group :development, :test do
