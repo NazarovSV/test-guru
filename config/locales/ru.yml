@@ -44,9 +44,16 @@ ru:
 
   admin:
     tests:
+      test:
+        question:
+          few: "%{count} вопроса"
+          many: "%{count} вопросов"
+          one: "%{count} вопрос"
+          other: "%{count} вопросов"
       create:
         success: "Тест создан успешно!"
       index:
+        add: "Добавить вопрос.."
         header: "Тесты"
     nav:
       header: "TestGuru Админская Панель"

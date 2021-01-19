@@ -40,9 +40,14 @@ en:
 
   admin:
     tests:
+      test:
+        question:
+          one: "%{count} question"
+          other: "%{count} questions"
       create:
         success: "Test create successfully!"
       index:
+        add: "Add new test.."
         header: "Tests"
     nav:
       header: "TestGuru Admin Panel"
