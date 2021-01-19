@@ -58,6 +58,17 @@ ru:
       new:
         header: "Добавить тест"
         back: "Назад"
+      show:
+        questions: "Вопросы"
+        new: "Новый вопрос"
+        back: "Назад"
+    questions:
+      question:
+        show: "Показать"
+        edit: "Редактировать"
+        destroy: "Удалить"
+        confirm: "Подтвердить удаление?"
+
     nav:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"

@@ -2,7 +2,7 @@
 <% if @questions.present? %>
   <table>
     <tr>
-      <th align="left">Questions:</th>
+      <th align="left"><%= t('.questions') %>:</th>
       <th colspan="3"></th>
     </tr>
     <%= render @questions %>
@@ -11,5 +11,5 @@
 <br/>
 <br/>
 
-<%= link_to 'New Question', new_admin_test_question_url(test_id: @test.id) %> |
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('.new'), new_admin_test_question_url(test_id: @test.id) %> |
+<%= link_to t('.back'), admin_tests_path %>
