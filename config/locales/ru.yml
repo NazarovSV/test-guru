@@ -55,6 +55,9 @@ ru:
       index:
         add: "Добавить вопрос.."
         header: "Тесты"
+      new:
+        header: "Добавить тест"
+        back: "Назад"
     nav:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"

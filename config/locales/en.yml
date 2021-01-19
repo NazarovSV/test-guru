@@ -49,6 +49,9 @@ en:
       index:
         add: "Add new test.."
         header: "Tests"
+      new:
+        header: "Add new"
+        back: "Back"
     nav:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
