@@ -66,16 +66,12 @@ ru:
       destroyed: До свидания! Ваша учетная запись удалена. Надеемся снова увидеть вас.
       new:
         header: "Стать Guru"
-        first_name: "Имя"
-        last_name: "Фамилия"
         email: Почта
         password: Пароль
         password_confirmation: Подтверждение пароля
         sign_up: Регистрация
 
       edit:
-        first_name: "Имя"
-        last_name: "Фамилия"
         are_you_sure: Вы уверены?
         cancel_my_account: Удалить учетную запись
         currently_waiting_confirmation_for_email: "Ожидается подтверждение адреса E-mail: %{email}"
@@ -134,3 +130,8 @@ ru:
         many: "%{resource}: сохранение не удалось из-за %{count} ошибок:"
         one: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
         other: "%{resource}: сохранение не удалось из-за %{count} ошибки:"
+  user:
+    email: Почта
+    password: Пароль
+    first_name: Имя
+    last_name: Фамилия

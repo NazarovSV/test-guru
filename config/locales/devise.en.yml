@@ -59,15 +59,8 @@ en:
       new:        
         sign_up: "Registration"
         header: "Become a Guru"
-        first_name: "First Name"
-        last_name: "Last Name"
-        email: "Email"
-        password: "Password"
         password_confirmation: "Password confirmation"
         sign_up: "Registration"
-      edit:
-        first_name: "First Name"
-        last_name: "Last Name"
 
     shared:
       links:
@@ -98,3 +91,8 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
+  user:
+    email: Email
+    password: Password
+    first_name: First Name
+    last_name: Last Name
