@@ -1,5 +1,5 @@
 <p>
     <%= test.title %>
-    (<%= pluralize(test.questions.count, 'question', plural: 'questions') %>)
-    <%= button_to 'Start', start_test_path(test) %>
+    (<%= t('.question', count: test.questions.count) %>)
+    <%= button_to t('.start', email: current_user.email), start_test_path(test) %>
 </p>

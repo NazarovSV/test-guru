@@ -1,33 +1,119 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+      answer:
+        create: "Create answer"
+        update: "Update answer"
+      question:
+        create: "Create question"
+        update: "Update question"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+    current_year:
+      year: "Current year: %{year}"
+
+  test_passages:
+    result:
+      completed: 'The "%{title}" Test was Completed!'
+      failed: 'The "%{title}" Test was failed!'
+      rate: "Success rate"
+      back: "Back to tests"
+    show:
+      header: 'Passing the "%{title}" Test'
+      question_no:
+        one: "%{number} question from %{count} question"
+        other: "%{number} question from %{count} questions"
+      next: "Next"
+      back: "Back to tests"
+
+  tests:
+    index:
+      header: "Tests"
+    test:
+      question:
+        one: "%{count} question"
+        other: "%{count} questions"
+      start: "Start"
+
+  layouts:
+    application:
+      welcome: "Welcome, <b>%{email}</b> Guru"
+      login: "Login"
+      logout: "Logout"
+      registration: "Registration"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  admin:
+    tests:
+      test:
+        question:
+          one: "%{count} question"
+          other: "%{count} questions"
+      create:
+        success: "Test create successfully!"
+      index:
+        add: "Add new test.."
+        header: "Tests"
+      new:
+        header: "Add new"
+      show:
+        questions: "Questions"
+        new: "New Question"
+    questions:
+      question:
+        confirm: "Confirm deletion?"
+      show:
+        header: "Answers"
+        new: "New Answer"
+      edit:
+        question: "Question"
+      new:
+        question: "Question"
+    answers:
+      answer:
+        confirm: "Are you sure?"
+      show:
+        header: "Question"
+        answer: "Answer"
+        correct: "Correct"
+      edit:
+        header: "Editing Answer"
+      form:
+        variant: "Variant"
+        correct: "Correct"
+      new:
+        header: "New Answer"
+    nav:
+      header: "TestGuru Admin Panel"
+      welcome: "Welcome, <b>%{email}</b> Guru"
+      logout: "Logout"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  custom_helper:
+    question:
+      edit: 'Edit "%{title}" Question'
+      create: 'Create "%{title}" Question'
+
+  button:
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    back: "Back"
+
+  "true": "yes"
+  "false": "no"
+
+  not_authorized: "You are not authorized to view this path."

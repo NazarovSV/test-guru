@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      test: "Test"
+
+    attributes:
+      test:
+        title: "Title"
+        category: "Category"
+      question:
+        body: "Question"
+      answer:
+        variant: "Variant"
+
+    errors:
+      messages:
+        blank: "can't be blank"
+        wrong_format: "Wrong email format"

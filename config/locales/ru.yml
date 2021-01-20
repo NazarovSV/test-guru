@@ -1,1 +1,130 @@
 ru:
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+      answer:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+      question:
+        create: "Создать вопрос"
+        update: "Обновить вопрос"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    current_year:
+      year: "Текущий год: %{year}"
+
+  layouts:
+    application:
+      welcome: "Привет, <b>%{email}</b> Гуру"
+      login: "Войти"
+      logout: "Выйти"
+      registration: "Зарегистрироваться"
+
+  test_passages:
+    result:
+      completed: 'Тест "%{title}" пройден!'
+      failed: 'Тест "%{title}" провален!'
+      rate: "Процент успешности"
+      back: "Назад к списку тестов"
+    show:
+      header: 'Прохождение "%{title}" теста'
+      question_no:
+        few: "%{number} вопрос из %{count} вопросов"
+        many: "%{number} вопрос из %{count} вопросов"
+        one: "%{number} вопрос из %{count} вопроса"
+        other: "%{number} вопрос из %{count} вопросов"
+      next: "Следующий вопрос"
+      back: "Назад к списку тестов"
+
+  tests:
+    index:
+      header: "Тесты"
+    test:
+      question:
+        few: "%{count} вопроса"
+        many: "%{count} вопросов"
+        one: "%{count} вопрос"
+        other: "%{count} вопросов"
+      start: "Начать"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибки"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  admin:
+    tests:
+      test:
+        question:
+          few: "%{count} вопроса"
+          many: "%{count} вопросов"
+          one: "%{count} вопрос"
+          other: "%{count} вопросов"
+      create:
+        success: "Тест создан успешно!"
+      index:
+        add: "Добавить вопрос.."
+        header: "Тесты"
+      new:
+        header: "Добавить тест"
+        back: "Назад"
+      show:
+        questions: "Вопросы"
+        new: "Новый вопрос"
+        back: "Назад"
+    questions:
+      question:
+        confirm: "Подтвердить удаление?"
+      show:
+        header: "Ответы"
+        new: "Новый ответ"
+      edit:
+        question: "Вопрос"
+      new:
+        question: "Вопрос"
+    answers:
+      answer:
+        confirm: "Вы уверены?"
+      show:
+        header: "Вопрос"
+        answer: "Ответ"
+        correct: "Правильный"
+      edit:
+        header: "Редактирование ответа"
+      form:
+        variant: "Вариант"
+        correct: "Правильный"
+      new:
+        header: "Новый ответ"
+
+    nav:
+      header: "TestGuru Админская Панель"
+      welcome: "Привет, <b>%{email}</b> Гуру"
+      logout: "Выйти"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы успешно завершили тест на TestGuru!"
+
+  custom_helper:
+    question:
+      edit: 'Обновить "%{title}" вопрос'
+      create: 'Создать "%{title}" вопрос'
+
+  button:
+    show: "Показать"
+    edit: "Редактировать"
+    destroy: "Удалить"
+    back: "Назад"
+
+  "true": "да"
+  "false": "нет"
+
+  not_authorized: "Вы не авторизованы для этого пути"

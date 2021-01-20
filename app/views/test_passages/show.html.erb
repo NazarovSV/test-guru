@@ -1,6 +1,7 @@
-<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <br>
-<b><%=@test_passage.question_number %> question from <%= pluralize(@test_passage.test.questions.count, 'question', plural: 'questions') %>:</b>
+<b><%= t('.question_no', count: @test_passage.test.questions.count, number: @test_passage.question_number) %>:</b>
+
 <br>
 <p>
   <%= @test_passage.current_question.body %>
@@ -13,8 +14,8 @@
       <%= b.label %>
     </p>    
   <% end %>
-  <p><%= form.submit 'Next' %></p>
+  <p><%= form.submit t('.next')%></p>
 <% end %>
 <br>
-<%= link_to 'Back to tests',  root_path%>
+<%= link_to t('.back'),  root_path%>
 <% %>
