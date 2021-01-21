@@ -40,18 +40,17 @@ en:
         other: "%{count} questions"
       start: "Start"
 
-  layouts:
-    application:
-      welcome: "Welcome, <b>%{email}</b> Guru"
-      login: "Login"
-      logout: "Logout"
-      registration: "Registration"
-
   shared:
     errors:
       header:
         one: "%{count} error detected"
         other: "%{count} errors detected"
+    nav:
+      welcome: "Welcome, <b>%{email}</b> Guru"
+      logout: "Logout"
+      login: "Login"
+      registration: "Registration"
+      admin_panel: "Admin Panel"
 
   admin:
     tests:

@@ -1,9 +1,17 @@
-<% if @test_passage.successfully? %>
-    <h1 style="color:green"><%= t('.completed', title: @test_passage.test.title) %></h1>
-<% else %>
-    <h1 style="color:red"><%= t('.failed', title: @test_passage.test.title) %></h1>
-<% end%>
-<br>
-<p><%= t('.rate') %>: <%= @test_passage.rate * 100 %>%</p>
-<%= link_to t('.back'),  root_path%>
+<div align="center">
+    <% if @test_passage.successfully? %>
+        <h1 style="color:green"><%= t('.completed', title: @test_passage.test.title) %></h1>
+    <% else %>
+        <h1 style="color:red"><%= t('.failed', title: @test_passage.test.title) %></h1>
+    <% end%>
+</div>
+<div class="text-center lead" style="margin-top: 40px;">
+    <p><%= t('.rate') %>: <h2 class="display-h5"><%= @test_passage.rate * 100 %>%</h2></p>
+</div>
 
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center mt-5">
+    <li class="breadcrumb-item"><%= link_to t('.back'),  root_path%></li>
+  </ol>
+</nav>

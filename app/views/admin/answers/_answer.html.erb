@@ -1,6 +1,14 @@
-<li>
+<tr>
+  <td style="vertical-align: middle">
     <%= answer.variant %>
-    <%= link_to t('button.show'), admin_answer_path(answer) %> | 
-    <%= link_to t('button.edit'), edit_admin_answer_path(answer) %> | 
-    <%= link_to t('button.destroy'), admin_answer_path(answer), method: :delete, data: {confirm: t('.confirm')} %>
-</li>
+  </td>
+  <td style="vertical-align: middle">
+    <%= link_to t('button.show'), admin_answer_path(answer), class: "btn btn-success btn-sm" %>
+  </td>
+  <td style="vertical-align: middle">
+    <%= link_to t('button.edit'), edit_admin_answer_path(answer), class: "btn btn-warning btn-sm" %>
+  </td>
+  <td style="vertical-align: middle">
+    <%= link_to t('button.destroy'), admin_answer_path(answer), class: "btn btn-danger btn-sm", method: :delete, data: {confirm: t('.confirm')} %>
+  </td>
+</tr>

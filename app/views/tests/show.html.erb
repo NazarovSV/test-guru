@@ -11,5 +11,9 @@
 <br/>
 <br/>
 
-<%= link_to 'New Question', new_test_question_url(test_id: @test.id) %> |
-<%= link_to 'Back', tests_url %>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item"><%= link_to 'New Question', new_test_question_url(test_id: @test.id) %> |</li>
+    <li class="breadcrumb-item"><%= link_to 'Back', tests_url %></li>
+  </ol>
+</nav>

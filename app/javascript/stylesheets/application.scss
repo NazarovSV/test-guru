@@ -1,0 +1,41 @@
+@import "bootstrap";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .navbar-brand {
+  margin-left: 15px;
+}
+
+.navbar .navbar-text {
+  margin-right: 15px;
+}
+
+.list-group {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-color: ghostwhite;
+}

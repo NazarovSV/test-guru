@@ -1,13 +1,24 @@
-<h3>
+<h2 class="display-4 text-center">
   <%= @question.body %>
-</h3>
-<h2><%= t('.header') %></h2>
-<%= link_to t('.new'), new_admin_question_answer_path(@question) %>
-
-<ol>
-  <%= render @question.answers %>
-</ol>
-
+</h2>
+  <div class="row justify-content-center mt-3">
+    <div class="col col-md-6">
+          <h3 align="center"><%= t('.header') %>:</h3>
+          <table class="table border-secondary" >
+            <tr>
+              <th align="left"></th>
+              <th colspan="3"></th>
+            </tr>
+            <%= render @question.answers %>
+          </table>
+    </div>
+  </div>
 <br>
-<%= link_to t('button.edit'), edit_admin_question_path(@question) %> |
-<%= link_to t('button.back'), admin_test_path(@question.test) %>
+
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb justify-content-center">
+      <li class="breadcrumb-item"><%= link_to t('.new'), new_admin_question_answer_path(@question) %></li>
+      <li class="breadcrumb-item"><%= link_to t('button.edit'), edit_admin_question_path(@question) %></li>
+      <li class="breadcrumb-item"><%= link_to t('button.back'), admin_test_path(@question.test) %></li>
+    </ol>
+  </nav>
