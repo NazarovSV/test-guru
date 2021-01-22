@@ -8,7 +8,12 @@ module ApplicationHelper
   end
 
   def flash_message(type)
-    content_tag :p, flash[type], class: "flash #{type}" if flash[type]
+    return unless flash[type]
+
+    content_tag :div, class: "alert #{message_type(type)} alert-dismissible fade show", role: 'alert' do
+      content_tag(:span, flash[type]) +
+        button_tag('', type: 'button', class: 'btn-close', data: { bs_dismiss: 'alert' }, aria: { label: 'Close' })
+    end
   end
 
   def current_progress(total_question, current_question)

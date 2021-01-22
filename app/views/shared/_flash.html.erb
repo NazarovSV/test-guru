@@ -1,8 +1,6 @@
 <div class="pt-2">
-  </div><% flash.each do |key, message| %>
-    <div class="alert <%= message_type(key) %> alert-dismissible fade show" role="alert">
-      <%= message %>
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+  <% flash.each do |key, message| %>
+    <%= flash_message(key) %>    
   <% end %>
 </div>
+
