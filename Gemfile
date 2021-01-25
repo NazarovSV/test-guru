@@ -34,6 +34,8 @@ gem 'devise', '~> 4.0'
 # UI
 gem 'bootstrap', '~> 5.0.0.beta1'
 
+gem 'octokit', '~> 4.0'
+
 # NETWORKING
 gem 'faraday'
 
