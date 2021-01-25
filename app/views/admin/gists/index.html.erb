@@ -1,0 +1,13 @@
+<h1 class="display-4 d-flex justify-content-center"><%= t('.header') %></h1>
+<table class="table">
+    <thead class="thead">
+          <tr>
+                <th scope="col"><%= t('.question') %></th>
+                <th scope="col"><%= t('.url') %></th>
+                <th scope="col"><%= t('.user') %></th>
+          </tr>            
+    </thead>
+    <tbody>
+          <%= render @gists %>
+    </tbody>
+</table>

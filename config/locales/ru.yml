@@ -114,6 +114,13 @@ ru:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"
       logout: "Выйти"
+      gist: "Гисты"
+    gists:
+      index:
+        header: "Список Гистов"
+        question: "Вопрос"
+        url: "Ссылка"
+        user: "Почта автора"
 
   services:
     gist_question_service:

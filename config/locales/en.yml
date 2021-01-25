@@ -99,6 +99,13 @@ en:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
       logout: "Logout"
+      gist: "Gists"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        url: "Url"
+        user: "Email"
 
   tests_mailer:
     completed_test:
