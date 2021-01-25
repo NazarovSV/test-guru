@@ -37,7 +37,7 @@ ru:
       next: "Следующий вопрос"
       back: "Назад к списку тестов"
     gist:
-      success: "Gist успешно сохранён!"
+      success_html: "Gist успешно сохранён! URL: %{url}"
       failure: "Во время сохранения gist произошла ошибка!"
 
   tests:

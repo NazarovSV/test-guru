@@ -31,7 +31,7 @@ en:
       next: "Next"
       back: "Back to tests"
     gist:
-      success: "Gist was successfully created!"
+      success: "Gist was successfully created! URL: %{url}"
       failure: "An error occurred whule saving gist!"
 
   tests:
