@@ -20,9 +20,6 @@ ru:
   layouts:
     application:
       welcome: "Привет, <b>%{email}</b> Гуру"
-      login: "Войти"
-      logout: "Выйти"
-      registration: "Зарегистрироваться"
 
   test_passages:
     result:
@@ -58,6 +55,12 @@ ru:
         many: "Обнаружено %{count} ошибки"
         one: "Обнаружена %{count} ошибка"
         other: "Обнаружено %{count} ошибки"
+    nav:
+      welcome: "Привет, <b>%{email}</b> Гуру"
+      logout: "Выйти"
+      login: "Войти"
+      registration: "Зарегистрироваться"
+      admin_panel: "Админка"
 
   admin:
     tests:

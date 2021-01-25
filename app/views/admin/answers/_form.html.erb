@@ -3,13 +3,13 @@
   
   <p>
     <%= form.label :variant, t('.variant') %><br>
-    <%= form.text_area :variant, id: :answer_variant, rows: 7, cols: 60 %><br>
+    <%= form.text_area :variant, id: :answer_variant, rows: 7, class: "form-control" %><br>
   </p>
-
-  <p>
-    <%= form.label :correct, t('.correct') %><br>
-    <%= form.check_box :correct, id: :answer_correct %>
-  </p>
-
-  <%= form.submit %>
+  <div class="form-check">
+    <%= form.label :correct, class: 'form-check-label' do %>
+      <%= form.check_box :correct, class: 'form-check-input' %>
+      <%= t('.correct') %>              
+    <% end %>
+  </div>
+  <%= form.submit class: "btn btn-primary mt-3"%>
 <% end %>

@@ -1,21 +1,38 @@
-<h1><%= t('.header', title: @test_passage.test.title) %></h1>
-<br>
-<b><%= t('.question_no', count: @test_passage.test.questions.count, number: @test_passage.question_number) %>:</b>
+<h4 align="center"><%= t('.header', title: @test_passage.test.title) %></h4>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <b>
+      <%= t('.question_no', count: @test_passage.test.questions.count, number: @test_passage.question_number) %>:
+    </b>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: <%= current_progress(@test_passage.test.questions.count, @test_passage.question_number) %>%" aria-valuenow="<%= current_progress(@test_passage.test.questions.count, @test_passage.question_number)  %>" aria-valuemin="0" aria-valuemax="100">
+      </div>
+    </div>
+    <div class="card mt-5">
+      <div class="card-body border-secondary">
 
-<br>
-<p>
-  <%= @test_passage.current_question.body %>
-</p>
-
-<%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form|%>
-  <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :variant, include_hidden: false do |b| %>
-    <p>
-      <%= b.check_box id: "answer_ids_#{b.object.id}" %>
-      <%= b.label %>
-    </p>    
-  <% end %>
-  <p><%= form.submit t('.next')%></p>
-<% end %>
-<br>
-<%= link_to t('.back'),  root_path%>
-<% %>
+        <p>
+          <%= @test_passage.current_question.body %>
+        </p>        
+        <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form|%>
+          <div class="form-check">
+            <%= form.collection_check_boxes :answer_ids, @test_passage.current_question.answers, :id, :variant, include_hidden: false do |b| %>
+            <p>
+              <%= b.check_box id: "answer_ids_#{b.object.id}", class: "form-check-input" %>
+              <%= b.label %>
+            </p>    
+            <% end %>
+          </div>
+          <div class="col text-center">
+            <%= form.submit t('.next') , class: "btn btn-primary mt-3"  %>
+          </div>
+        <% end %>
+      </div>            
+    </div>
+  </div>            
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center mt-5">
+    <li class="breadcrumb-item"><%= link_to t('.back'), root_path%></li>
+  </ol>
+</nav>

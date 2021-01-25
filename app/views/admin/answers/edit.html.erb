@@ -1,9 +1,19 @@
-<h2><%= t('.header') %>:</h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h4 align="center"><%= t('.header') %>:</h4>
+    <div class="card mt-5">
+      <div class="card-body border-secondary">
+        <h5 align="center">
+          <%= @answer.question.body %>
+        </h5>
 
-<p>
-  <%= @answer.question.body %>
-</p>
-
-<%= render 'form', answer: @answer %>
-<br>
-<%= link_to t('button.back'), admin_question_path(@answer.question) %>
+        <%= render 'form', answer: @answer %>
+      </div>
+    </div>
+  </div>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item"><%= link_to t('button.back'), admin_question_path(@answer.question) %></li>
+  </ol>
+</nav>

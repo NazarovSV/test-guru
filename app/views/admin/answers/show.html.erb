@@ -1,17 +1,26 @@
-<h2><%= t('.header')%>:</h2>
+<h4 align="center"><%= t('.header')%>:</h4>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <div class="card mt-5">
+      <div class="card-body border-secondary text-white <%= answer_background_card(@answer.correct) %>">
+        <p align="center">
+          <%= @answer.question.body %>
+        </p>
+        <p>
+          <b><%= t('.answer') %>:</b>
+          <%= @answer.variant %>
+        <p>
+        <p>
+          <b><%= t('.correct') %>:</b>
+          <%= t(@answer.correct) %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <%= @answer.question.body %>
-</p>
-
-<p>
-  <b><%= t('.answer') %>:</b>
-  <%= @answer.variant %>
-<p>
-
-<p>
-  <b><%= t('.correct') %>:</b>
-  <%= t(@answer.correct) %>
-</p>
-
-<%= link_to t('button.back'), admin_question_path(@answer.question) %>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center mt-5">
+    <li class="breadcrumb-item"><%= link_to t('button.back'), admin_question_path(@answer.question) %></li>
+  </ol>
+</nav>

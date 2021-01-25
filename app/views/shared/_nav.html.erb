@@ -1,0 +1,17 @@
+<nav class='navbar' style="background-color: rgba(50, 115, 220, 0.3)">
+  <%= link_to 'Test Guru', root_path, class: 'navbar-brand' %>
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      <%= raw t('.welcome', email: current_user.email) %> | 
+      <%= link_to t('.logout'), destroy_user_session_path, method: :delete %>
+      <% if current_user.is_a?(Admin) %>
+        <div style="text-align: right">
+          <%= link_to t('.admin_panel'), admin_tests_path, method: :get %>
+        </div>
+      <% end %>
+    <% else %>
+        <%= link_to t('.registration'), new_user_registration_path, method: :get %> | 
+        <%= link_to t('.login'), new_user_session_path, method: :get %>
+    <% end %>
+  </span>
+</nav>
