@@ -22,8 +22,7 @@ class TestPassagesController < ApplicationController
     result = client.call
 
     flash_options = if client.gist_created?
-                      { notice: t('.success_html',
-                                  url: result.html_url) }
+                      { notice: t('.success_html', url: result.html_url) }
                     else
                       { alert: t('.failure') }
                     end
