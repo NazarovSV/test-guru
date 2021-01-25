@@ -23,9 +23,13 @@
             </p>    
             <% end %>
           </div>
-          <div class="col text-center">
-            <%= form.submit t('.next') , class: "btn btn-primary mt-3"  %>
-          </div>
+          
+          <div class="col text-center">            
+            <%= form.submit t('.next') , class: "btn btn-primary mt-3"  %>            
+          </div>          
+          <div class="col text-center", style="margin-top:20px;">            
+            <%= link_to 'Gist Question', gist_test_passage_path(@test_passage), method: :post%>
+          </div>          
         <% end %>
       </div>            
     </div>

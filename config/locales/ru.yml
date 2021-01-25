@@ -36,6 +36,9 @@ ru:
         other: "%{number} вопрос из %{count} вопросов"
       next: "Следующий вопрос"
       back: "Назад к списку тестов"
+    gist:
+      success: "Gist успешно сохранён!"
+      failure: "Во время сохранения gist произошла ошибка!"
 
   tests:
     index:

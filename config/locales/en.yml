@@ -30,6 +30,9 @@ en:
         other: "%{number} question from %{count} questions"
       next: "Next"
       back: "Back to tests"
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred whule saving gist!"
 
   tests:
     index:
