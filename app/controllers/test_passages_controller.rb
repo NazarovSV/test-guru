@@ -21,18 +21,24 @@ class TestPassagesController < ApplicationController
     client = GistQuestionService.new(@test_passage.current_question)
     result = client.call
 
-    flash_options = if client.gist_created?
-                      { notice: t('.success_html', url: result.html_url) }
-                    else
-                      { alert: t('.failure') }
-                    end
+    if client.gist_created?
+      gist_save(result.html_url)
+      flash[:notice] = t('.success_html', url: result.html_url)
+    else
+      flash[:alert] = t('.failure')
+    end
 
-    redirect_to @test_passage, flash_options
+    redirect_to @test_passage
   end
 
   private
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def gist_save(url)
+    Gist.create!(url: url, user_id: current_user.id,
+                 question_id: @test_passage.current_question.id)
   end
 end
