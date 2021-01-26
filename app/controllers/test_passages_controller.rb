@@ -18,10 +18,9 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    client = GistQuestionService.new(@test_passage.current_question)
-    result = client.call
+    result = GistQuestionService.new(@test_passage.current_question).call
 
-    if client.gist_created?
+    if result.success?
       gist_save(result.html_url)
       flash[:notice] = t('.success_html', url: result.html_url)
     else
