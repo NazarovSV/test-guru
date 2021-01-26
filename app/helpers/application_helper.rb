@@ -20,14 +20,6 @@ module ApplicationHelper
     ((current_question * 1.0) / total_question) * 100
   end
 
-  def cropping_text(text)
-    text[0, 25]
-  end
-
-  def url_hash(url)
-    url.split('/').last
-  end
-
   def message_type(type)
     case type
     when 'notice' then 'alert-success'
