@@ -36,6 +36,10 @@ ru:
         other: "%{number} вопрос из %{count} вопросов"
       next: "Следующий вопрос"
       back: "Назад к списку тестов"
+      gist_question: "Gist вопрос"
+    gist:
+      success_html: "Gist успешно сохранён! URL: %{url}"
+      failure: "Во время сохранения gist произошла ошибка!"
 
   tests:
     index:
@@ -111,6 +115,17 @@ ru:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"
       logout: "Выйти"
+      gist: "Гисты"
+    gists:
+      index:
+        header: "Список Гистов"
+        question: "Вопрос"
+        url: "Ссылка"
+        user: "Почта автора"
+
+  services:
+    gist_question_service:
+      description: "Вопрос %{title} из TestGuru"
 
   tests_mailer:
     completed_test:

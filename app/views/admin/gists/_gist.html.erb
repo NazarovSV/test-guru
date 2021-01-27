@@ -1,0 +1,5 @@
+<tr>
+      <td scope="row"><%= link_to truncate(gist.question.body, length: 25), admin_question_path(id: gist.question.id) %></td>
+      <td><%= link_to url_gist_hash(gist.url), gist.url, target: :blank %></td>
+      <td><%= gist.user.email %></td>
+</tr>

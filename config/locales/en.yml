@@ -30,6 +30,10 @@ en:
         other: "%{number} question from %{count} questions"
       next: "Next"
       back: "Back to tests"
+      gist_question: "Gist question"
+    gist:
+      success: "Gist was successfully created! URL: %{url}"
+      failure: "An error occurred whule saving gist!"
 
   tests:
     index:
@@ -96,6 +100,13 @@ en:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
       logout: "Logout"
+      gist: "Gists"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        url: "Url"
+        user: "Email"
 
   tests_mailer:
     completed_test:
@@ -105,6 +116,10 @@ en:
     question:
       edit: 'Edit "%{title}" Question'
       create: 'Create "%{title}" Question'
+
+  services:
+    gist_question_service:
+      description: "A question about %{title} from TestGuru"
 
   button:
     show: "Show"
