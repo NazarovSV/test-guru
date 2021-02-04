@@ -1,5 +1,11 @@
-<h1 class="display-4 text-center"><%= t('.header') %></h1>
+<h1 class="display-4 text-center"><%= t('.header') %>
+</h1>
 
+<div class="sort-by-title pointer" style="margin-left: 55px">
+      <%= t('.sort')%>
+      <%= octicon 'arrow-up', class: 'text-success hide' %>
+      <%= octicon 'arrow-down', class: 'text-success hide' %>
+</div>
       <ul class="list-group list-group-flush">
             <%= render @tests %>
       </ul>
@@ -7,5 +13,3 @@
 <div class="text-center" style="margin-top: 30px" >
       <%= link_to t('.add'), new_admin_test_path %>
 </div>
-
-</button>
