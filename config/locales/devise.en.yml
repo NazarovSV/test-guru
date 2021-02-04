@@ -61,6 +61,7 @@ en:
         header: "Become a Guru"
         password_confirmation: "Password confirmation"
         sign_up: "Registration"
+        passwords_dont_match: "Password don't match!"
 
     shared:
       links:

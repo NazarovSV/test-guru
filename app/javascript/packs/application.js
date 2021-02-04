@@ -8,6 +8,7 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("../utilities/sorting")
+require("../utilities/password_matching")
 
 import "bootstrap";
 import "../stylesheets/application";

@@ -70,6 +70,7 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
         sign_up: Регистрация
+        passwords_dont_match: Пароли не совпадают!
 
       edit:
         are_you_sure: Вы уверены?
