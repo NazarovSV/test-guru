@@ -2,10 +2,13 @@
 </h1>
 
 <div class="sort-by-title pointer" style="margin-left: 55px">
-      <%= t('.sort')%>
-      <%= octicon 'arrow-up', class: 'text-success hide' %>
-      <%= octicon 'arrow-down', class: 'text-success hide' %>
+    <button class="btn-sort btn btn-light" style="horison">
+      <%= t('.sort') %>
+      <%= octicon 'arrow-up', class: 'text-primary hide' %>
+      <%= octicon 'arrow-down', class: 'text-primary hide' %>
+    </button>
 </div>
+<br>
       <ul class="list-group list-group-flush">
             <%= render @tests %>
       </ul>

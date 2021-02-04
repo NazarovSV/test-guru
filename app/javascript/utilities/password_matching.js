@@ -1,8 +1,9 @@
 document.addEventListener('turbolinks:load', function() {
     let control = document.querySelector('.password-confirmation')
     if(control) { 
-        control.addEventListener('change', passwordMatching) }
+        control.addEventListener('change', passwordMatching) 
         control.addEventListener('input', clearWarning)
+    }
 })
 
 function passwordMatching() {  

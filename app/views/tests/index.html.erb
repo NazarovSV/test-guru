@@ -1,4 +1,13 @@
 <h1 class="display-4 d-flex justify-content-center"><%= t('.header') %></h1>
 <div class="row" style="margin-left: 10px;">
-  <%= render @tests %>
+  <div>
+    <button class="btn-sort btn btn-light" style="horison">
+      <%= t('.sort') %>
+      <%= octicon 'arrow-up', class: 'text-primary hide' %>
+      <%= octicon 'arrow-down', class: 'text-primary hide' %>
+    </button>
+  </div>
+  <div class="card-group">
+    <%= render @tests %>
+  </div>
 </div>
