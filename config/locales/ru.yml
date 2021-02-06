@@ -44,6 +44,7 @@ ru:
   tests:
     index:
       header: "Тесты"
+      sort: "Отсортировать"
     test:
       question:
         few: "%{count} вопроса"
@@ -79,6 +80,7 @@ ru:
       index:
         add: "Добавить вопрос.."
         header: "Тесты"
+        sort: "Отсортировать"
       new:
         header: "Добавить тест"
         back: "Назад"

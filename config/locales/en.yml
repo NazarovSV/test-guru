@@ -38,6 +38,7 @@ en:
   tests:
     index:
       header: "Tests"
+      sort: "Sort"
     test:
       question:
         one: "%{count} question"
@@ -67,6 +68,7 @@ en:
       index:
         add: "Add new test.."
         header: "Tests"
+        sort: "Sort"
       new:
         header: "Add new"
       show:
