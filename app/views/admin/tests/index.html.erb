@@ -1,11 +1,8 @@
 <h1 class="display-4 text-center"><%= t('.header') %></h1>
-
-      <ul class="list-group list-group-flush">
-            <%= render @tests %>
-      </ul>
-
+<ul class="list-group list-group-flush">
+  <%= render @tests %>
+</ul>
 <div class="text-center" style="margin-top: 30px" >
-      <%= link_to t('.add'), new_admin_test_path %>
+  <%= link_to t('.add'), new_admin_test_path %>
 </div>
-
 </button>
