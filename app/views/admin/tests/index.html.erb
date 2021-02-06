@@ -1,8 +1,18 @@
-<h1 class="display-4 text-center"><%= t('.header') %></h1>
-<ul class="list-group list-group-flush">
-  <%= render @tests %>
-</ul>
-<div class="text-center" style="margin-top: 30px" >
-  <%= link_to t('.add'), new_admin_test_path %>
+<h1 class="display-4 text-center"><%= t('.header') %>
+</h1>
+
+<div class="sort-by-title pointer" style="margin-left: 55px">
+    <button class="btn-sort btn btn-light" style="horison">
+      <%= t('.sort') %>
+      <%= octicon 'arrow-up', class: 'text-primary hide' %>
+      <%= octicon 'arrow-down', class: 'text-primary hide' %>
+    </button>
 </div>
-</button>
+<br>
+      <ul class="list-group list-group-flush">
+            <%= render @tests %>
+      </ul>
+
+<div class="text-center" style="margin-top: 30px" >
+      <%= link_to t('.add'), new_admin_test_path %>
+</div>

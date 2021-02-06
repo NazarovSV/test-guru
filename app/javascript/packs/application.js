@@ -7,6 +7,9 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("../utilities/sorting_ul")
+require("../utilities/sorting_card_group")
+require("../utilities/password_matching")
 
 import "bootstrap";
 import "../stylesheets/application";

@@ -18,17 +18,18 @@
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field">
+  <div class="field password">
     <%= f.label :password, t('user.password') %>
     <% if @minimum_password_length %>
     <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>
     <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.password_field :password, autocomplete: "new-password" %>    
   </div>
 
-  <div class="field">
+  <div class="field password-confirmation">
     <%= f.label :password_confirmation, t('.password_confirmation')  %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %> <%= octicon 'alert', class: 'text-danger hide' %>
+    <p class="password-matching-failed text-danger hide"><%= t('.passwords_dont_match') %></p>
   </div>
 
   <div class="actions">
