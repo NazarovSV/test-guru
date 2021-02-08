@@ -75,6 +75,8 @@ ru:
           many: "%{count} вопросов"
           one: "%{count} вопрос"
           other: "%{count} вопросов"
+        edit: "Отредактировать"
+        delete: "Удалить"
       create:
         success: "Тест создан успешно!"
       index:
