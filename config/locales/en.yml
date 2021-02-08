@@ -74,6 +74,8 @@ en:
       show:
         questions: "Questions"
         new: "New Question"
+      form_inline:
+        submit: "Save"
     questions:
       question:
         confirm: "Confirm deletion?"

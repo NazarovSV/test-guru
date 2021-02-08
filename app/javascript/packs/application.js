@@ -10,6 +10,7 @@ require("channels")
 require("../utilities/sorting_ul")
 require("../utilities/sorting_card_group")
 require("../utilities/password_matching")
+require("../utilities/form_inline")
 
 import "bootstrap";
 import "../stylesheets/application";

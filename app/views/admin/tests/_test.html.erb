@@ -1,4 +1,16 @@
 <li class="list-group-item">
-    <%= link_to test.title, admin_test_url(id: test.id) %>
-    (<%= t('.question', count: test.questions.count) %>)
+  <div>
+    <%= content_tag :span, class: 'test-title', data: { test_id: test.id } do %>
+      <%= content_tag :h3 do %>
+        <%= link_to test.title, admin_test_url(id: test.id) %>
+      <% end %>
+      <%= content_tag :h5, "(#{t('.question', count: test.questions.count)})" %>
+    <% end %>
+    <%= render 'form_inline', test: test == @test ? @test : test %>
+    <br>
+  </div>
+  <div>
+    <%= link_to t('.edit'), edit_admin_test_path(test), data: { test_id: test.id }, class: 'form-inline-link' %> |
+    <%= link_to t('.delete'), admin_test_path(test), method: :delete, data: { confirm: t('.confirm') }  %>
+  </div>
 </li>

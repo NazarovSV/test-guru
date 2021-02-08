@@ -88,6 +88,8 @@ ru:
         questions: "Вопросы"
         new: "Новый вопрос"
         back: "Назад"
+      form_inline:
+        submit: "Сохранить"
     questions:
       question:
         confirm: "Подтвердить удаление?"
