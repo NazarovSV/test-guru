@@ -75,6 +75,8 @@ ru:
           many: "%{count} вопросов"
           one: "%{count} вопрос"
           other: "%{count} вопросов"
+        edit: "Отредактировать"
+        delete: "Удалить"
       create:
         success: "Тест создан успешно!"
       index:
@@ -88,6 +90,8 @@ ru:
         questions: "Вопросы"
         new: "Новый вопрос"
         back: "Назад"
+      form_inline:
+        submit: "Сохранить"
     questions:
       question:
         confirm: "Подтвердить удаление?"

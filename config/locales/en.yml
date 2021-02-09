@@ -63,6 +63,8 @@ en:
         question:
           one: "%{count} question"
           other: "%{count} questions"
+        edit: "Edit"
+        delete: "Delete"
       create:
         success: "Test create successfully!"
       index:
@@ -74,6 +76,8 @@ en:
       show:
         questions: "Questions"
         new: "New Question"
+      form_inline:
+        submit: "Save"
     questions:
       question:
         confirm: "Confirm deletion?"
