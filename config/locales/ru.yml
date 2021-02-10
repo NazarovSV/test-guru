@@ -53,6 +53,19 @@ ru:
         other: "%{count} вопросов"
       start: "Начать"
 
+  feedbacks:
+    create:
+      success: "Письмо отправлено успешно"
+      failure: "Возникла непредвиденная проблема"
+    new:
+      email: "Почта"
+      message: "Введите текст сообщения"
+      send: "Отправить"
+      
+  feedbacks_mailer:
+    forward:
+      feedback: "Обратная связь"
+
   shared:
     errors:
       header:

@@ -45,6 +45,19 @@ en:
         other: "%{count} questions"
       start: "Start"
 
+  feedbacks:
+    create:
+      success: "Email sent successfully"
+      failure: "There were problems sending email"
+    new:
+      email: "Email"
+      message: "Enter message"
+      send: "Send"
+      
+  feedbacks_mailer:
+    forward:
+      feedback: "Feedback"
+      
   shared:
     errors:
       header:

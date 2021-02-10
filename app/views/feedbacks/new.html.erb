@@ -1,0 +1,23 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <div class="card mt-5">
+      <div class="card-body border-secondary">
+      
+  <%= form_with model: @feedback, local: true do |form| %>
+    <%= render 'shared/errors', resource: @feedback %>
+    <p>
+      <%= form.label :email, t('.email'), class: "form-laber" %><br>
+      <%= form.text_field :email, id: :feedback_email, class: "form-control" %>
+    </p>
+    <p>
+      <%= form.label :message,t('.message'), class: "form-laber" %><br>
+      <%= form.text_area :message, id: :feedback_message, class: "form-control", rows: "10" %>
+    </p>
+    <p>
+      <%= form.submit t('.send') , class: "btn btn-primary mt-3"%>
+    </p>
+  <% end %>
+</div>
+</div>
+</div>
+</div>

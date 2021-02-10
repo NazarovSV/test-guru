@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'tests#index'
 
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout }
@@ -21,6 +22,8 @@ Rails.application.routes.draw do
       post :gist
     end
   end
+
+  resources :feedbacks, only: %i[new create]
 
   namespace :admin do
     resources :tests, shallow: true do
