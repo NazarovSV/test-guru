@@ -10,12 +10,12 @@
 
 # Users
 
-unless User.find_by(email: 'fake@yandex.ru')
-  @user = User.create!(name: 'Sergey Nazarov', email: 'fake@yandex.ru',
+unless User.find_by(email: 'badger.lock@yandex.ru')
+  @user = User.create!(name: 'Sergey Nazarov', email: 'badger.lock@yandex.ru',
                        password: '111111')
 end
-unless User.find_by(email: 'admin@tguru.net')
-  @admin = Admin.create!(name: 'Admin', first_name: 'Sergey', last_name: 'Nazarov', email: 'admin@tguru.net',
+unless User.find_by(email: 'heroku.test.guru@yandex.ru')
+  @admin = Admin.create!(name: 'Admin', first_name: 'Sergey', last_name: 'Nazarov', email: 'heroku.test.guru@yandex.ru',
                          password: '111111')
 end
 
