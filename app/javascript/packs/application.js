@@ -12,6 +12,8 @@ require("../utilities/sorting_card_group")
 require("../utilities/password_matching")
 require("../utilities/form_inline")
 require("../utilities/progress_bar")
+require("../utilities/timer_checkbox_handler")
+
 
 import "bootstrap";
 import "../stylesheets/application";

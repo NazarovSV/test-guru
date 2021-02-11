@@ -14,6 +14,7 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+        timer: "Timer(second)"
     current_year:
       year: "Current year: %{year}"
 
@@ -86,7 +87,8 @@ en:
         header: "Tests"
         sort: "Sort"
       new:
-        header: "Add new"
+        header: "Add new"   
+        timer: "Timer(second)"     
       show:
         questions: "Questions"
         new: "New Question"

@@ -14,6 +14,7 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+        timer: "Таймер(секунды)"
     current_year:
       year: "Текущий год: %{year}"
 
@@ -99,7 +100,8 @@ ru:
         sort: "Отсортировать"
       new:
         header: "Добавить тест"
-        back: "Назад"
+        back: "Назад"        
+        timer: "Таймер(секунды)"
       show:
         questions: "Вопросы"
         new: "Новый вопрос"

@@ -17,6 +17,15 @@
             <%= form.label :category_id, class: "form-laber" %><br>
             <%= form.collection_select :category_id, Category.all, :id, :title, prompt: true, class: "form-control" %>
           </p>
+
+          <div class="timer-checkbox">
+            <%= form.label :timer, class: 'form-check-label' do %>
+              <%= form.check_box :show_timer_input, class: 'form-check-input' %>
+              <%= t('.timer') %>                            
+            <% end %>            
+          </div>
+          <%= form.number_field :timer, id: :test_timer, class: "form-control example-number-input hide", min: 0 %>
+
           <p><%= form.submit class: "btn btn-primary mt-3"%></p>
         <% end %>
       </div>
