@@ -1,10 +1,20 @@
-<footer class="footer text-muted">
+<footer class="footer text-muted text-center">
+  <div class="mt-5">
     <p>Author: Sergey Nazarov</p>
     <p>
       <a href="https://thinknetica.com" target="_blank" rel="nofollow">Study project at Thinknetica online school </a> on creating and passing tests.
     </p>
+    <p>
       <%= github_url('NazarovSV','test-guru') %>
+    </p>
+      <p>          
+        <%= link_to new_feedback_path, class: "text-secondary hide-underling" do %>
+          Feedback
+        <%= octicon 'mail'%>
+      <% end %>
+    </p>
     <p>
       <%= current_year %> year
     </p>
+  </div>
 </footer>

@@ -13,9 +13,25 @@ ru:
         variant: "Вариант"
       user:
         email: "Почта"
-        password: "Пароль"
+        password: "Пароль"      
 
     errors:
       messages:
         blank: "не может быть пустым"
-        wrong_format: "имеет не правильный формат"
+        wrong_format: "имеет не правильный формат"      
+  
+  activemodel:
+    attributes:
+      feedback:
+        email: "Почта"
+        message: "Письмо"
+    errors:
+      models:
+        feedback:
+          attributes:
+            message:
+              blank: "не может быть пустым"
+            email:
+              wrong_format: "имеет не правильный формат"
+
+

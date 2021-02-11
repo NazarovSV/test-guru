@@ -4,8 +4,8 @@ ru:
       test:
         create: "Создать тест"
       answer:
-        create: "Создать вопрос"
-        update: "Обновить вопрос"
+        create: "Создать ответ"
+        update: "Обновить ответ"
       question:
         create: "Создать вопрос"
         update: "Обновить вопрос"
@@ -53,6 +53,19 @@ ru:
         other: "%{count} вопросов"
       start: "Начать"
 
+  feedbacks:
+    create:
+      success: "Письмо отправлено успешно"
+      failure: "Возникла непредвиденная проблема"
+    new:
+      email: "Почта"
+      message: "Введите текст сообщения"
+      send: "Отправить"
+      
+  feedbacks_mailer:
+    forward:
+      feedback: "Обратная связь"
+
   shared:
     errors:
       header:
@@ -77,10 +90,11 @@ ru:
           other: "%{count} вопросов"
         edit: "Отредактировать"
         delete: "Удалить"
+        confirm: "Вы уверены, что хотите удалить тест?"
       create:
         success: "Тест создан успешно!"
       index:
-        add: "Добавить вопрос.."
+        add: "Добавить тест.."
         header: "Тесты"
         sort: "Отсортировать"
       new:
@@ -97,7 +111,7 @@ ru:
         confirm: "Подтвердить удаление?"
       show:
         header: "Ответы"
-        new: "Новый ответ"
+        new: "Добавить ответ"
       edit:
         question: "Вопрос"
       new:
@@ -147,6 +161,7 @@ ru:
     edit: "Редактировать"
     destroy: "Удалить"
     back: "Назад"
+    save: "Сохранить"
 
   "true": "да"
   "false": "нет"

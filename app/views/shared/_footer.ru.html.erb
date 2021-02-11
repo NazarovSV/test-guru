@@ -1,14 +1,20 @@
 
 <footer class="footer text-muted text-center">
       <div class="mt-5">
-        <p>
+        <div>
           Автор: Сергей Назаров
-        </p>
+        <div>
         <p>
           <a href="https://thinknetica.com" target="_blank" rel="nofollow">Учебный проект в онлайн-школе Thinknetica</a> по созданию и прохождению тестов.
         </p>
         <p>
           <%= github_url('NazarovSV','test-guru') %>
+        </p>
+        <p>          
+          <%= link_to new_feedback_path, class: "text-secondary hide-underling" do %>
+            Обратная связь
+            <%= octicon 'mail'%>
+          <% end %>
         </p>
         <p>
           <%= current_year %> год
