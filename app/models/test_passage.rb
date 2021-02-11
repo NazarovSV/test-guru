@@ -29,6 +29,14 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).index(current_question) + 1
   end
 
+  def time_left
+    (test.timer - (Time.now - created_at)).to_i
+  end
+
+  def has_timer?
+    test.timer.present?
+  end
+
   private
 
   def before_validation_set_current_question

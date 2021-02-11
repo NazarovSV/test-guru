@@ -11,6 +11,16 @@
                       role: 'progressbar',
                       data: { current_progress: @test_passage.question_number, max_progress: @test_passage.test.questions.count} %>
     </div>
+    
+    <% if @test_passage.has_timer? %>
+      <%= content_tag :div, 
+                        '',
+                        id: :timer,
+                        data: { timeout: @test_passage.time_left, id: @test_passage.id },
+                        style: 'text-align: center; font-size: 40px;' %> 
+    <% end%>
+    
+
     <div class="card mt-5">
       <div class="card-body border-secondary">
         <p>
