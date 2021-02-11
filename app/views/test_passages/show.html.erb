@@ -12,7 +12,7 @@
                       data: { current_progress: @test_passage.question_number, max_progress: @test_passage.test.questions.count} %>
     </div>
     
-    <% if @test_passage.has_timer? %>
+    <% if @test_passage.timer? %>
       <%= content_tag :div, 
                         '',
                         id: :timer,

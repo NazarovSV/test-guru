@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   SUCCESS_RATE = 0.85
 
   def successfully?
-    rate >= SUCCESS_RATE
+    rate >= SUCCESS_RATE && completed?
   end
 
   def rate
@@ -33,7 +33,7 @@ class TestPassage < ApplicationRecord
     (test.timer - (Time.now - created_at)).to_i
   end
 
-  def has_timer?
+  def timer?
     test.timer.present?
   end
 
