@@ -9,11 +9,19 @@ en:
       question:
         create: "Create question"
         update: "Update question"
+      badge:
+        create: Create
+        update: Update
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      badge:
+        name: Name
+        image_url: Image url
+        rule_type: Rule
+        description: Description
     current_year:
       year: "Current year: %{year}"
 
@@ -116,11 +124,25 @@ en:
         correct: "Correct"
       new:
         header: "New Answer"
+    badges:
+      new:
+        header: New badge
+      edit:
+        header: Update badge
+      index:
+        name: Name
+        image: Image
+        action: Action
+        header: Badges
+      show:
+        rule_type: Rule type
+        description: Description
     nav:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
       logout: "Logout"
       gist: "Gists"
+      badge: Badges
     gists:
       index:
         header: "Gists"
@@ -136,6 +158,10 @@ en:
     question:
       edit: 'Edit "%{title}" Question'
       create: 'Create "%{title}" Question'
+    rules:
+      first_try: 'Passing on the first attempt'
+      hard_test: 'Through all the difficult tests'
+      easy_category: 'Passing the easy category tests'
 
   services:
     gist_question_service:

@@ -1,0 +1,15 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <h4 align="center"><%= t('.header') %></h4>
+    <div class="card mt-5">
+      <div class="card-body border-secondary">
+        <%= render 'form', badge: @badge %>
+      </div>
+    </div>
+  </div>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center">
+    <li class="breadcrumb-item"><%= link_to t('button.back'), admin_badges_url %></li>
+  </ol>
+</nav>

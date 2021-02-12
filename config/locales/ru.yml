@@ -9,11 +9,19 @@ ru:
       question:
         create: "Создать вопрос"
         update: "Обновить вопрос"
+      badge:
+        create: "Создать бадж"
+        update: "Обновить"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      badge:
+        name: Имя
+        image_url: Ссылка на файл
+        rule_type: Правило
+        description: Описание
     current_year:
       year: "Текущий год: %{year}"
 
@@ -130,12 +138,26 @@ ru:
         correct: "Правильный"
       new:
         header: "Новый ответ"
+    badges:
+      new:
+        header: Новый бадж
+      edit:
+        header: Обновить бадж
+      index:
+        name: Название
+        image: Изображение
+        action: Действие
+        header: Список всех баджей
+      show:
+        rule_type: Правило
+        description: Описание
 
     nav:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"
       logout: "Выйти"
       gist: "Гисты"
+      badge: "Баджи"
     gists:
       index:
         header: "Список Гистов"
@@ -155,6 +177,10 @@ ru:
     question:
       edit: 'Обновить "%{title}" вопрос'
       create: 'Создать "%{title}" вопрос'
+    rules:
+      first_try: 'Прохождение с первой попытки'
+      hard_test: 'Прохождение всех сложных тестов'
+      easy_category: 'Прохождение тестов легкой категории'
 
   button:
     show: "Показать"
