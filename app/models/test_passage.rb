@@ -37,6 +37,10 @@ class TestPassage < ApplicationRecord
     test.timer.present?
   end
 
+  def test_time_is_over?
+    timer? && time_left <= 0
+  end
+
   private
 
   def before_validation_set_current_question

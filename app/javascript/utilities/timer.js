@@ -2,7 +2,7 @@ document.addEventListener('turbolinks:load', app)
 
 function app() {
 
-    let element = document.getElementById('timer')
+    const element = document.getElementById('timer')
     
     if (element) {
         let timeout = element.dataset.timeout
@@ -19,17 +19,11 @@ function app() {
 
                 if (timeout <= 0) {
                     clearTimeout(timer)
-                    redirectToResult(id)
+                    document.querySelector('form').submit();
                 }
             }, 1000)
         }
     }
-}
-
-function redirectToResult(id) {
-    let host = window.location.host
-    let protocol = window.location.protocol
-    window.location.replace(protocol + '//' + host + '/test_passages/' + id +'/result' )
 }
 
 function div(val, by) {
