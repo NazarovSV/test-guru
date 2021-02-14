@@ -77,7 +77,7 @@ ru:
       name: Название
       image: Изображение
       count: Кол-во
-      
+
   feedbacks:
     create:
       success: "Письмо отправлено успешно"
@@ -104,7 +104,8 @@ ru:
       login: "Войти"
       registration: "Зарегистрироваться"
       admin_panel: "Админка"
-      achived_badge: Полученные баджи
+      achived_badge: Полученные баджи(%{count})
+      achived_zero_badge: Полученные баджи
       badge: Все баджи
 
   admin:

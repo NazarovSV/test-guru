@@ -81,15 +81,15 @@ end
 badges = [{ name: 'Прохождение теста с первой попытки',
             image_url: 'https://ultimatecup.ru/images/achievements/5yjlxSOA.png',
             rule_type: :first_try,
-            description: 'описание баджа' },
+            description: 'Проверяется, что тест пройден успешно с первого раза. Повторно за тот же тест получить награду нельзя' },
           { name: 'Прохождение сложного теста',
             image_url: 'https://ultimatecup.ru/images/achievements/QgsZUTBW.png',
             rule_type: :hard_test,
-            description: 'описание баджа' },
+            description: 'Проверяется, что пройден сложный тест с lvl > 5. Можно повторно за тот же тест получить бадж' },
           { name: 'Прохождение всех тестов легкой категории',
             image_url: 'https://ultimatecup.ru/images/achievements/wKHHNKog.png',
             rule_type: :easy_category,
-            description: 'описание баджа' }]
+            description: 'Проверяется, что пройдены все тесты легкой категории. Повторно получить нельзя' }]
 
 badges.each do |badge|
   Badge.find_or_create_by! badge

@@ -14,19 +14,25 @@ class UserBadgesService
 
   private
 
+  #Проверяется, что тест пройден успешно с первого раза
+  #Повторно за тот же тест получить награду нельзя
   def first_try?(_badge)
     @test_passage.successfully? && TestPassage.where(test: @test, user: @current_user).one?
   end
 
+  #Проверяется, что пройден сложный тест с lvl > 5
+  #можно повторно за тот же тест получить бадж
   def hard_test?(_badge)
     @test_passage.successfully? &&
       Test.hard.include?(@test_passage.test) &&
       TestPassage.where(test: @test, user: @current_user).any? { :successfully? }
   end
 
+  #Проверяется, что пройдены все тесты легкой категории
+  #Повторно получить нельзя
   def easy_category?(badge)
     UserBadge.where(badge: badge, user: @current_user).empty? &&
-      @test.category.title == 'Простые' &&
+      @test.category.simple? &&
       @test_passage.successfully? &&
       all_easy_test_done?
   end

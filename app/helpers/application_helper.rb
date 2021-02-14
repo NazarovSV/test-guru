@@ -32,4 +32,12 @@ module ApplicationHelper
   def answer_background_card(correct)
     correct ? 'bg-success' : 'bg-danger'
   end
+
+  def achived_badges_link(user)
+    if user.badges.count.zero?
+      link_to(t('.achived_zero_badge'), user_badges_path)
+    else
+      link_to(t('.achived_badge', count: user.badges.count), user_badges_path)
+    end
+  end
 end
