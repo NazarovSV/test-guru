@@ -21,4 +21,10 @@ class Test < ApplicationRecord
       .order(title: :desc)
       .pluck(:title)
   end
+
+  def self.id_with_easy_category
+    joins('JOIN categories ON tests.category_id = categories.id')
+      .where(categories: { title: 'Простые' })
+      .pluck(:id)
+  end
 end

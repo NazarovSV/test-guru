@@ -23,7 +23,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :feedbacks, only: %i[new create]
+  resources :feedbacks, only: %i[create new]
+  resources :badges, only: %i[index show]
+  resources :user_badges, only: :index
 
   namespace :admin do
     resources :tests, shallow: true do

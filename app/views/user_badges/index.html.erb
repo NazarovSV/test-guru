@@ -1,0 +1,27 @@
+<h3 class="d-flex justify-content-center"><%= t('.header') %></h3>
+<div class="row" style="margin-left: 10px;">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"><%= t('.name') %></th>
+        <th scope="col"><%= t('.image') %></th>
+        <th scope="col"><%= t('.count') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user_badges.each do |user_badge| %>
+        <tr>
+          <td style="vertical-align: middle">
+            <%= user_badge[:badge].name %>
+          </td>
+          <td style="vertical-align: middle">
+            <img src="<%= user_badge[:badge].image_url %>">
+          </td>
+          <td style="vertical-align: middle">
+            <%= user_badge[:count] %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

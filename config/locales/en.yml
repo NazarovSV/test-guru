@@ -52,6 +52,24 @@ en:
         one: "%{count} question"
         other: "%{count} questions"
       start: "Start"
+  
+  badges:
+    index:
+      header: Badges
+      name: Name
+      image: Image
+      action: Action
+    show:
+      rule_type: Rule
+      description: Description
+  
+  user_badges:
+    index:
+      header: Achived badges
+      name: Name
+      image: Image
+      count: Count
+
 
   feedbacks:
     create:
@@ -77,6 +95,8 @@ en:
       login: "Login"
       registration: "Registration"
       admin_panel: "Admin Panel"
+      achived_badge: Achived badges
+      badge: Badges
 
   admin:
     tests:

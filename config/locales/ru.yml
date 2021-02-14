@@ -61,6 +61,23 @@ ru:
         other: "%{count} вопросов"
       start: "Начать"
 
+  badges:
+    index:
+      header: Баджи
+      name: Название
+      image: Изображение
+      action: Действие
+    show:
+      rule_type: Правило
+      description: Описание
+
+  user_badges:
+    index:
+      header: Полученные баджи    
+      name: Название
+      image: Изображение
+      count: Кол-во
+      
   feedbacks:
     create:
       success: "Письмо отправлено успешно"
@@ -87,6 +104,8 @@ ru:
       login: "Войти"
       registration: "Зарегистрироваться"
       admin_panel: "Админка"
+      achived_badge: Полученные баджи
+      badge: Все баджи
 
   admin:
     tests:
