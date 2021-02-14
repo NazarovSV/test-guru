@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   SUCCESS_RATE = 0.85
 
   def successfully?
-    rate >= SUCCESS_RATE
+    rate >= SUCCESS_RATE && completed?
   end
 
   def rate
@@ -27,6 +27,18 @@ class TestPassage < ApplicationRecord
 
   def question_number
     test.questions.order(:id).index(current_question) + 1
+  end
+
+  def time_left
+    (test.timer - (Time.now - created_at)).to_i
+  end
+
+  def timer?
+    test.timer.present?
+  end
+
+  def test_time_is_over?
+    timer? && time_left <= 0
   end
 
   private
