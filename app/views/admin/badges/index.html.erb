@@ -1,5 +1,5 @@
 <div class="align-center">
-<h3 align="center"><%= t('.header') %></h3>
+  <h3 align="center"><%= t('.header') %></h3>
 </div>
 <br>
 <table class="table table-striped">
@@ -16,3 +16,6 @@
     <%= render @badges %>
   </tbody>
 </table>
+<div class="text-center" style="margin-top: 30px" >
+  <%= link_to t('.add'), new_admin_badge_path %>
+</div>

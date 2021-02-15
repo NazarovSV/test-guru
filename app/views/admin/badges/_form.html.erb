@@ -12,7 +12,11 @@
     <%= form.label :rule_type, class: "form-laber" %><br>
     <%= form.select :rule_type, rules, id: :badge_rule_type, class: "form-control" %>
   </p>
-   <p>
+  <p>
+    <%= form.label :value, class: "form-laber" %><br>
+    <%= form.text_field :value, id: :badge_value, class: "form-control" %>
+  </p>
+  <p>
     <%= form.label :description, class: "form-laber" %><br>
     <%= form.text_area :description, id: :badge_description, rows: 7, class: "form-control" %><br>
   </p>

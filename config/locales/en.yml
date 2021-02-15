@@ -154,6 +154,7 @@ en:
         image: Image
         action: Action
         header: Badges
+        add: Add
       show:
         rule_type: Rule type
         description: Description
@@ -179,9 +180,9 @@ en:
       edit: 'Edit "%{title}" Question'
       create: 'Create "%{title}" Question'
     rules:
-      first_try: 'Passing on the first attempt'
-      hard_test: 'Through all the difficult tests'
-      easy_category: 'Passing the easy category tests'
+      successful_by_first_time: 'Passing on the first attempt'
+      successful_by_level: 'Passing the test of a certain level(scope)'
+      successful_by_category: 'Passing a certain category of test'
 
   services:
     gist_question_service:

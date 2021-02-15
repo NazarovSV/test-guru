@@ -22,6 +22,7 @@ ru:
         image_url: Ссылка на файл
         rule_type: Правило
         description: Описание
+        value: Значение
     current_year:
       year: "Текущий год: %{year}"
 
@@ -168,6 +169,7 @@ ru:
         image: Изображение
         action: Действие
         header: Список всех баджей
+        add: Добавить
       show:
         rule_type: Правило
         description: Описание
@@ -198,10 +200,9 @@ ru:
       edit: 'Обновить "%{title}" вопрос'
       create: 'Создать "%{title}" вопрос'
     rules:
-      first_try: 'Прохождение с первой попытки'
-      hard_test: 'Прохождение всех сложных тестов'
-      easy_category: 'Прохождение тестов легкой категории'
-
+      successful_by_first_time: 'Прохождение с первой попытки'
+      successful_by_level: 'Прохождение теста определенного уровня(scope)'
+      successful_by_category: 'Прохождение теста определенной категории'
   button:
     show: "Показать"
     edit: "Редактировать"

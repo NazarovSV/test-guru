@@ -1,11 +1,6 @@
 module Admin::BadgeHelper
   def rules
-    output = []
-
-    Badge::RULES.each do |rule|
-      output << [translate_rule(rule), rule]
-    end
-    output
+    Badge.rules.map { |rule, _id| [translate_rule(rule), rule] }
   end
 
   def translate_rule(rule)

@@ -10,14 +10,17 @@
 
 # Users
 
-unless User.find_by(email: 'badger.lock@yandex.ru')
-  @user = User.create!(name: 'Sergey Nazarov', email: 'badger.lock@yandex.ru',
+@user = User.find_by(email: 'badger.lock@yandex.ru') ||
+        User.create!(name: 'Sergey Nazarov',
+                     email: 'badger.lock@yandex.ru',
+                     password: '111111')
+
+@admin = User.find_by(email: 'heroku.test.guru@yandex.ru') ||
+         Admin.create!(name: 'Admin',
+                       first_name: 'Sergey',
+                       last_name: 'Nazarov',
+                       email: 'heroku.test.guru@yandex.ru',
                        password: '111111')
-end
-unless User.find_by(email: 'heroku.test.guru@yandex.ru')
-  @admin = Admin.create!(name: 'Admin', first_name: 'Sergey', last_name: 'Nazarov', email: 'heroku.test.guru@yandex.ru',
-                         password: '111111')
-end
 
 # Categories
 simple_category = Category.find_or_create_by!(title: 'Простые')
@@ -80,17 +83,19 @@ end
 # badges
 badges = [{ name: 'Прохождение теста с первой попытки',
             image_url: 'https://ultimatecup.ru/images/achievements/5yjlxSOA.png',
-            rule_type: :first_try,
+            rule_type: :successful_by_first_time,
             description: 'Проверяется, что тест пройден успешно с первого раза. Повторно за тот же тест получить награду нельзя' },
-          { name: 'Прохождение сложного теста',
+          { name: 'Прохождение теста определенного уровня(scope)',
             image_url: 'https://ultimatecup.ru/images/achievements/QgsZUTBW.png',
-            rule_type: :hard_test,
-            description: 'Проверяется, что пройден сложный тест с lvl > 5. Можно повторно за тот же тест получить бадж' },
-          { name: 'Прохождение всех тестов легкой категории',
+            rule_type: :successful_by_level,
+            description: 'Проверяется, что тест входит в указанную группу(scope) сложности. Можно повторно за тот же тест получить бадж',
+            value: 'hard' },
+          { name: 'Прохождение теста определенной категории',
             image_url: 'https://ultimatecup.ru/images/achievements/wKHHNKog.png',
-            rule_type: :easy_category,
-            description: 'Проверяется, что пройдены все тесты легкой категории. Повторно получить нельзя' }]
-
+            rule_type: :successful_by_category,
+            description: 'Проверяется, что пройдены все тесты указанной категории. Повторно получить нельзя',
+            value: 'Простые' }]
+            
 badges.each do |badge|
   Badge.find_or_create_by! badge
 end
