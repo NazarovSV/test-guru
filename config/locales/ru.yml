@@ -9,11 +9,20 @@ ru:
       question:
         create: "Создать вопрос"
         update: "Обновить вопрос"
+      badge:
+        create: "Создать бадж"
+        update: "Обновить"
     label:
       test:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+      badge:
+        name: Имя
+        image_url: Ссылка на файл
+        rule_type: Правило
+        description: Описание
+        value: Значение
     current_year:
       year: "Текущий год: %{year}"
 
@@ -53,6 +62,23 @@ ru:
         other: "%{count} вопросов"
       start: "Начать"
 
+  badges:
+    index:
+      header: Баджи
+      name: Название
+      image: Изображение
+      action: Действие
+    show:
+      rule_type: Правило
+      description: Описание
+
+  user_badges:
+    index:
+      header: Полученные баджи    
+      name: Название
+      image: Изображение
+      count: Кол-во
+
   feedbacks:
     create:
       success: "Письмо отправлено успешно"
@@ -79,6 +105,9 @@ ru:
       login: "Войти"
       registration: "Зарегистрироваться"
       admin_panel: "Админка"
+      achived_badge: Полученные баджи(%{count})
+      achived_zero_badge: Полученные баджи
+      badge: Все баджи
 
   admin:
     tests:
@@ -130,12 +159,27 @@ ru:
         correct: "Правильный"
       new:
         header: "Новый ответ"
+    badges:
+      new:
+        header: Новый бадж
+      edit:
+        header: Обновить бадж
+      index:
+        name: Название
+        image: Изображение
+        action: Действие
+        header: Список всех баджей
+        add: Добавить
+      show:
+        rule_type: Правило
+        description: Описание
 
     nav:
       header: "TestGuru Админская Панель"
       welcome: "Привет, <b>%{email}</b> Гуру"
       logout: "Выйти"
       gist: "Гисты"
+      badge: "Баджи"
     gists:
       index:
         header: "Список Гистов"
@@ -155,7 +199,10 @@ ru:
     question:
       edit: 'Обновить "%{title}" вопрос'
       create: 'Создать "%{title}" вопрос'
-
+    rules:
+      successful_by_first_time: 'Прохождение с первой попытки'
+      successful_by_level: 'Прохождение теста определенного уровня(scope)'
+      successful_by_category: 'Прохождение теста определенной категории'
   button:
     show: "Показать"
     edit: "Редактировать"

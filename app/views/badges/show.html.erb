@@ -1,0 +1,25 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-4">
+    <div class="card mt-5">
+      <div class="card-body border-secondary %>">
+        <p align="center">
+          <img src="<%= @badge.image_url %>">
+        </p>
+        <p align="center">
+          <%= @badge.name %>
+        </p>
+        <br>
+        <%= t('.rule_type') %>:
+        <b><%= translate_rule(@badge.rule_type) %></b>
+        <br>
+        <%= t('.description') %>:
+        <b><%= @badge.description %></b>
+      </div>
+    </div>
+  </div>
+</div>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb justify-content-center mt-5">
+    <li class="breadcrumb-item"><%= link_to t('button.back'), badges_url %></li>
+  </ol>
+</nav>

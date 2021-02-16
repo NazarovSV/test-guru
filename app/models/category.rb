@@ -6,4 +6,8 @@ class Category < ApplicationRecord
   validates :title, presence: true
 
   default_scope { order(title: :asc) }
+
+  def simple?
+    title == 'Простые'
+  end
 end

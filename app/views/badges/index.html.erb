@@ -1,0 +1,16 @@
+<div class="align-center">
+  <h3 align="center"><%= t('.header') %></h3>
+</div>
+<br>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col"><%= t('.name') %></th>
+      <th scope="col"><%= t('.image') %></th>
+      <th scope="col" style="padding-left: 20px;"><%= t('.action') %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render @badges %>
+  </tbody>
+</table>

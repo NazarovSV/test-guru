@@ -10,14 +10,17 @@
 
 # Users
 
-unless User.find_by(email: 'badger.lock@yandex.ru')
-  @user = User.create!(name: 'Sergey Nazarov', email: 'badger.lock@yandex.ru',
+@user = User.find_by(email: 'badger.lock@yandex.ru') ||
+        User.create!(name: 'Sergey Nazarov',
+                     email: 'badger.lock@yandex.ru',
+                     password: '111111')
+
+@admin = User.find_by(email: 'heroku.test.guru@yandex.ru') ||
+         Admin.create!(name: 'Admin',
+                       first_name: 'Sergey',
+                       last_name: 'Nazarov',
+                       email: 'heroku.test.guru@yandex.ru',
                        password: '111111')
-end
-unless User.find_by(email: 'heroku.test.guru@yandex.ru')
-  @admin = Admin.create!(name: 'Admin', first_name: 'Sergey', last_name: 'Nazarov', email: 'heroku.test.guru@yandex.ru',
-                         password: '111111')
-end
 
 # Categories
 simple_category = Category.find_or_create_by!(title: 'Простые')
@@ -75,4 +78,24 @@ answers = [{ variant: 'bmw', question: car_question },
 
 answers.each do |answer|
   Answer.find_or_create_by! answer
+end
+
+# badges
+badges = [{ name: 'Прохождение теста с первой попытки',
+            image_url: 'https://ultimatecup.ru/images/achievements/5yjlxSOA.png',
+            rule_type: :successful_by_first_time,
+            description: 'Проверяется, что тест пройден успешно с первого раза. Повторно за тот же тест получить награду нельзя' },
+          { name: 'Прохождение всех теста определенного уровня',
+            image_url: 'https://ultimatecup.ru/images/achievements/QgsZUTBW.png',
+            rule_type: :successful_by_level,
+            description: 'Проверяется, что пройдены все тесты указанного уровня. Повторно получить нельзя',
+            value: 0 },
+          { name: 'Прохождение всех теста определенной категории',
+            image_url: 'https://ultimatecup.ru/images/achievements/wKHHNKog.png',
+            rule_type: :successful_by_category,
+            description: 'Проверяется, что пройдены все тесты указанной категории. Повторно получить нельзя',
+            value: simple_category.id }]
+
+badges.each do |badge|
+  Badge.find_or_create_by! badge
 end

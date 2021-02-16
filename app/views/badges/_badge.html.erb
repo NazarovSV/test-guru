@@ -1,0 +1,11 @@
+<tr>
+  <td style="vertical-align: middle">
+    <%= badge.name %>
+  </td>
+  <td style="vertical-align: middle">
+    <img src="<%= badge.image_url %>">
+  </td>  
+  <td style="vertical-align: middle">
+    <%= link_to t('button.show'), badge_path(badge), class: "btn btn-success btn-sm" %>
+  </td>
+</tr>

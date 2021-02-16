@@ -21,4 +21,5 @@ class Test < ApplicationRecord
       .order(title: :desc)
       .pluck(:title)
   end
+
 end

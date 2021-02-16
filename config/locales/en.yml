@@ -9,11 +9,19 @@ en:
       question:
         create: "Create question"
         update: "Update question"
+      badge:
+        create: Create
+        update: Update
     label:
       test:
         title: "Title"
         level: "Level"
         category_id: "Category"
+      badge:
+        name: Name
+        image_url: Image url
+        rule_type: Rule
+        description: Description
     current_year:
       year: "Current year: %{year}"
 
@@ -44,6 +52,24 @@ en:
         one: "%{count} question"
         other: "%{count} questions"
       start: "Start"
+  
+  badges:
+    index:
+      header: Badges
+      name: Name
+      image: Image
+      action: Action
+    show:
+      rule_type: Rule
+      description: Description
+  
+  user_badges:
+    index:
+      header: Achived badges
+      name: Name
+      image: Image
+      count: Count
+
 
   feedbacks:
     create:
@@ -69,6 +95,9 @@ en:
       login: "Login"
       registration: "Registration"
       admin_panel: "Admin Panel"
+      achived_badge: Achived badges(%{count})
+      achived_zero_badge: Achived badges
+      badge: Badges
 
   admin:
     tests:
@@ -116,11 +145,26 @@ en:
         correct: "Correct"
       new:
         header: "New Answer"
+    badges:
+      new:
+        header: New badge
+      edit:
+        header: Update badge
+      index:
+        name: Name
+        image: Image
+        action: Action
+        header: Badges
+        add: Add
+      show:
+        rule_type: Rule type
+        description: Description
     nav:
       header: "TestGuru Admin Panel"
       welcome: "Welcome, <b>%{email}</b> Guru"
       logout: "Logout"
       gist: "Gists"
+      badge: Badges
     gists:
       index:
         header: "Gists"
@@ -136,6 +180,10 @@ en:
     question:
       edit: 'Edit "%{title}" Question'
       create: 'Create "%{title}" Question'
+    rules:
+      successful_by_first_time: 'Passing on the first attempt'
+      successful_by_level: 'Passing the test of a certain level(scope)'
+      successful_by_category: 'Passing a certain category of test'
 
   services:
     gist_question_service:
