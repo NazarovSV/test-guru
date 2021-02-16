@@ -95,7 +95,8 @@ en:
       login: "Login"
       registration: "Registration"
       admin_panel: "Admin Panel"
-      achived_badge: Achived badges
+      achived_badge: Achived badges(%{count})
+      achived_zero_badge: Achived badges
       badge: Badges
 
   admin:

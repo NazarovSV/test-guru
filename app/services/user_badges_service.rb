@@ -27,7 +27,7 @@ class UserBadgesService
 
   def successful_by_category?(badge)
     UserBadge.where(badge: badge, user: @current_user).empty? &&
-      @test.category.title == badge.value &&
+      @test.category.id == badge.value.to_i &&
       @test_passage.successfully? &&
       all_test_done?
   end

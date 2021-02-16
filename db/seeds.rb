@@ -94,8 +94,8 @@ badges = [{ name: 'Прохождение теста с первой попыт�
             image_url: 'https://ultimatecup.ru/images/achievements/wKHHNKog.png',
             rule_type: :successful_by_category,
             description: 'Проверяется, что пройдены все тесты указанной категории. Повторно получить нельзя',
-            value: 'Простые' }]
-            
+            value: simple_category.id }]
+
 badges.each do |badge|
   Badge.find_or_create_by! badge
 end
