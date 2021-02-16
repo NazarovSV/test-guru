@@ -19,21 +19,22 @@ class UserBadgesService
   end
 
   def successful_by_level?(badge)
-    @test_passage.successfully? &&
-      Test.level_scope_exists?(badge.value) &&
-      Test.send(badge.value).include?(@test_passage.test) &&
-      TestPassage.where(test: @test, user: @current_user).any? { :successfully? }
+    successful_by_condition?(badge, -> { @test.level == badge.value.to_i }, { level: @test.level })
   end
 
   def successful_by_category?(badge)
-    UserBadge.where(badge: badge, user: @current_user).empty? &&
-      @test.category.id == badge.value.to_i &&
-      @test_passage.successfully? &&
-      all_test_done?
+    successful_by_condition?(badge, -> { @test.category.id == badge.value.to_i }, { category: @test.category })
   end
 
-  def all_test_done?
-    Test.where(category: @test.category).select(:id).each do |id|
+  def successful_by_condition?(badge, equal_value_condition, condition)
+    UserBadge.where(badge: badge, user: @current_user).empty? &&
+      @test_passage.successfully? &&
+      equal_value_condition.call &&
+      all_test_done?(condition)
+  end
+
+  def all_test_done?(condition)
+    Test.where(condition).select(:id).each do |id|
       return false if TestPassage.where(test_id: id, user: @current_user).none? { :successfully? }
     end
     true

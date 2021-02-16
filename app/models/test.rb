@@ -22,7 +22,4 @@ class Test < ApplicationRecord
       .pluck(:title)
   end
 
-  def self.level_scope_exists?(level_scope)
-    level_scope.present? && %i[simple normal hard].include?(level_scope.to_sym)
-  end
 end
